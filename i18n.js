@@ -103,9 +103,9 @@ window.TOSH_TEXT = {
 
   "desserts.title": t("Десерты", "Desertlar", "Desserts"),
   "desserts.lead": t(
-    "Печём к кофе: печенье, рулеты, брауни и торты. Ассортимент на витрине меняется — спросите у бариста, что есть сегодня.",
-    "Qahvaga pishiramiz: pechenye, rulet, brauni va tortlar. Vitrinadagi tanlov oʻzgarib turadi — bugun nima borligini baristadan soʻrang.",
-    "Baked to go with coffee: cookies, rolls, brownies and cakes. The counter changes, so ask the barista what is on today."
+    "Печём к кофе: печенье, канеле, рулеты, брауни, тирамису и медовый торт. Полный список — в меню.",
+    "Qahvaga pishiramiz: pechenye, kanele, rulet, brauni, tiramisu va asalli tort. Toʻliq roʻyxat — menyuda.",
+    "Baked to go with coffee: cookies, canelés, rolls, brownies, tiramisu and honey cake. The full list is in the menu."
   ),
   "desserts.note": t("цены — на витрине", "narxlar vitrinada", "prices at the counter"),
   "ds1": t("Шоколадное печенье с карамелью и куртом", "Karamel va qurt bilan shokoladli pechenye", "Chocolate cookie with caramel and kurt"),
@@ -116,6 +116,15 @@ window.TOSH_TEXT = {
 
 
   "menu.title": t("Меню", "Menyu", "Menu"),
+  "order.title": t("Заказать с собой или с доставкой", "Olib ketish yoki yetkazib berish", "Order for pickup or delivery"),
+  "order.tg": t("Заказать в Telegram", "Telegramda buyurtma", "Order on Telegram"),
+  "order.yandex": t("Доставка — Яндекс Еда", "Yetkazish — Yandex Eda", "Delivery — Yandex Eats"),
+  "bar.label": t("Быстрые действия", "Tezkor amallar", "Quick actions"),
+  "bar.menu": t("Меню", "Menyu", "Menu"),
+  "bar.order": t("Заказать", "Buyurtma", "Order"),
+  "bar.route": t("Маршрут", "Yoʻnalish", "Directions"),
+  "bar.call": t("Позвонить", "Qoʻngʻiroq", "Call"),
+  "menu.new": t("Новинка", "Yangi", "New"),
   "menu.note": t("Цены в сумах.", "Narxlar soʻmda.", "Prices in Uzbek soʻm."),
 
   "reviews.title": t("Гости о нас", "Mehmonlar fikri", "What guests say"),
@@ -194,31 +203,6 @@ window.TOSH_REVIEWS = [
   )],
 ];
 
-/* Фото позиций меню (из сторис Tosh): русское название → файл в img/menu/ */
-window.TOSH_PHOTOS = {
-  "Эспрессо": "espresso", "Эспрессо макиато": "macchiato", "Американо": "americano", "V60": "v60",
-  "Бариста-сет": "barista-set", "Флэт уайт": "flat-white", "Капучино": "cappuccino", "Латте": "latte",
-  "Раф ванильный": "raf", "Колд-брю арбуз": "cb-tarvuz", "Колд-брю шарбат": "cb-sharbat",
-  "Эспрессо-тоник": "espresso-tonic", "Айс латте": "iced-latte", "Оранжино": "orangino", "Протеиновый кофе": "protein",
-  "Матча-латте, горячий": "matcha-hot", "Матча-латте, холодный": "matcha-iced", "Ходзича-латте, горячий": "hojicha-hot",
-  "Ходзича-латте, холодный": "hojicha-iced", "Матча-тоник": "matcha-tonic", "Матча «Банановое облако»": "banana-matcha",
-  "Урик шарбати": "orik", "Лимонад «Фейхоа»": "feijoa", "Райхон шарбати": "rayhon", "Зелёный детокс": "detox",
-  "Завтрак TOSH": "tosh-breakfast",
-  "Сыр гауда": "gouda", "Мортаделла": "mortadella", "Куриная грудка": "chicken", "Филе тунца жареное": "tuna",
-  "Креветки": "shrimp", "Лосось слабосолёный": "salmon", "Яйцо": "egg", "Авокадо": "avocado", "Салатный микс": "salad-mix", "Батат фри": "batat",
-  "Шакшука TOSH": "shakshuka", "Яйца TOSH с йогуртом и солёной гранолой": "tosh-eggs",
-  "Блинчики с курицей и грибами": "chicken-crepes", "Гречневая каша с яйцом и соусом песто": "buckwheat",
-  "Овсяная каша с шоколадом и бананом": "oatmeal", "Кофейный йогурт с чиа и жареным бананом": "yogurt",
-  "Карамельный тост с сыром": "toast", "Творожная запеканка с маком": "zapekanka",
-  "Сырники из рикотты с черничным кремом": "syrniki", "Блинчики с яблоком и корицей": "apple-crepes",
-  "Зелёный салат": "green-salad", "Протеиновый боул с курицей": "bowl-chicken", "Протеиновый боул с филе тунца": "bowl-tuna",
-  "С тунцом": "sandwich-tuna", "С курицей": "sandwich-chicken",
-  "С мортаделлой": "fb-mortadella", "С лососем": "fb-salmon", "Со страчателлой и трюфельной пастой": "fb-stracciatella",
-  "С домашней баклажанной икрой": "fb-eggplant", "С паштетом из куриной печени": "fb-pate", "С авокадо и солёной гранолой": "fb-avocado",
-  "Шоколадное печенье с карамелью и куртом": "cookie-kurt", "Овсяное печенье без пшеничной муки": "cookie-oat",
-  "Маковый рулет с апельсином": "poppy-roll", "Чиз-брауни с халвой и чёрным тмином": "brownie", "Медовый торт": "honey-cake",
-};
-
 /* Единицы объёма и веса */
 window.TOSH_UNITS = {
   ml: t("мл", "ml", "ml"),
@@ -226,208 +210,4 @@ window.TOSH_UNITS = {
   pc: t("шт.", "dona", "pc"),
 };
 
-/* Меню. Строка блюда: [название, объём или вес, цена, пояснение (необязательно)].
-   Объём: [число, "ml" | "g" | "pc"] или null. Цена — в сумах. */
-window.TOSH_MENU = [
-  {
-    id: "coffee",
-    pattern: "rose",
-    label: t("Кофе", "Qahva", "Coffee"),
-    groups: [
-      {
-        title: t("Чёрный кофе", "Qora qahva", "Black coffee"),
-        items: [
-          [t("Эспрессо", "Espresso", "Espresso"), [40, "ml"], 35000],
-          [t("Эспрессо макиато", "Espresso makiato", "Espresso macchiato"), [50, "ml"], 45000],
-          [t("Американо", "Americano", "Americano"), [200, "ml"], 35000],
-          [t("Батч-брю", "Batch brew", "Batch brew"), [200, "ml"], 35000],
-          [t("Фильтр-шот", "Filtr-shot", "Filter shot"), [50, "ml"], 60000],
-          [t("V60", "V60", "V60"), [250, "ml"], 60000],
-          [t("Бариста-сет", "Barista set", "Barista tasting set"), [370, "ml"], 80000,
-            t("эспрессо, фильтр и флэт уайт", "espresso, filtr va flat white", "espresso, filter and flat white")],
-        ],
-      },
-      {
-        title: t("Кофе с молоком", "Sutli qahva", "Coffee with milk"),
-        items: [
-          [t("Флэт уайт", "Flat white", "Flat white"), [180, "ml"], 50000],
-          [t("Капучино", "Cappuccino", "Cappuccino"), [250, "ml"], 50000],
-          [t("Латте", "Latte", "Latte"), [250, "ml"], 50000],
-          [t("Раф ванильный", "Vanilli raf", "Vanilla raf"), [250, "ml"], 55000],
-          [t("Какао", "Kakao", "Cocoa"), [250, "ml"], 45000],
-        ],
-      },
-      {
-        title: t("Холодный кофе", "Sovuq qahva", "Cold coffee"),
-        items: [
-          [t("Колд-брю арбуз", "Cold brew tarvuz", "Cold brew watermelon"), [230, "ml"], 45000],
-          [t("Колд-брю шарбат", "Cold brew sharbat", "Cold brew sharbat"), [230, "ml"], 45000,
-            t("", "", "with dried fruits")],
-          [t("Колд батч вишня-бергамот", "Sovuq olchali batch", "Cold batch brew cherry–bergamot"), [230, "ml"], 45000],
-          [t("Эспрессо-тоник", "Espresso-tonik", "Espresso tonic"), [350, "ml"], 50000],
-          [t("Айс латте", "Ays-latte", "Iced latte"), [350, "ml"], 50000],
-          [t("Айс капучино", "Ays-cappuccino", "Iced cappuccino"), [350, "ml"], 50000],
-          [t("Оранжино", "Orangino", "Orangino"), [350, "ml"], 60000],
-          [t("Протеиновый кофе", "Proteinli qahva", "Protein coffee"), [350, "ml"], 60000],
-        ],
-      },
-    ],
-  },
-  {
-    id: "drinks",
-    pattern: "ochre",
-    label: t("Матча и чай", "Matcha va choy", "Matcha & tea"),
-    groups: [
-      {
-        title: t("Матча", "Matcha", "Matcha"),
-        items: [
-          [t("Матча-латте, горячий", "Matcha-latte (issiq)", "Matcha latte, hot"), [200, "ml"], 50000],
-          [t("Матча-латте, холодный", "Matcha-latte (sovuq)", "Matcha latte, iced"), [350, "ml"], 50000],
-          [t("Ходзича-латте, горячий", "Hojicha-latte (issiq)", "Hojicha latte, hot"), [200, "ml"], 50000],
-          [t("Ходзича-латте, холодный", "Hojicha-latte (sovuq)", "Hojicha latte, iced"), [350, "ml"], 50000],
-          [t("Матча-тоник", "Matcha-tonik", "Matcha tonic"), [350, "ml"], 55000],
-          [t("Матча «Банановое облако»", "Bananli matcha buluti", "Banana matcha cloud"), [350, "ml"], 60000],
-        ],
-      },
-      {
-        title: t("Авторские холодные напитки", "Mualliflik sovuq ichimliklari", "Signature cold drinks"),
-        items: [
-          [t("Урик шарбати", "Oʻrik sharbati", "Dried fruit compote"), [230, "ml"], 40000,
-            t("яблоко, курага, кишмиш, специи, мёд", "olma, quritilgan oʻrik, kishmish, ziravorlar, asal", "apple, dried apricot, raisins, spices, honey")],
-          [t("Лимонад «Фейхоа»", "Feyxoa limonadi", "Feijoa lemonade"), [230, "ml"], 40000,
-            t("фейхоа, банан, ананас, газированная вода", "feyxoa, banan, ananas, gazlangan suv", "feijoa, banana, pineapple, sparkling water")],
-          [t("Райхон шарбати", "Rayhon sharbati", "Rayhon drink"), [230, "ml"], 40000,
-            t("райхон, красная смородина, клюква, алоэ", "rayhon, qizil smorodina, klyukva, aloe", "basil, redcurrant, cranberry, aloe")],
-          [t("Зелёный детокс", "Yashil detoks", "Green detox"), [230, "ml"], 45000,
-            t("щавель, лимон, яблоко, апельсин", "shovul, limon, olma, apelsin", "sorrel, lemon, apple, orange")],
-        ],
-      },
-      {
-        title: t("Чай", "Choy", "Tea"),
-        note: t("чайник 500 мл", "choynak 500 ml", "500 ml pot"),
-        items: [
-          [t("Горный чай", "Togʻ choyi", "Mountain tea"), null, 40000],
-          [t("Зелёный османтус", "Yashil osmantus", "Green osmanthus"), null, 50000],
-          [t("Ганпаудер", "Ganpauder", "Gunpowder"), null, 40000],
-          [t("Да Хун Пао", "Da Hong Pao", "Da Hong Pao"), null, 50000],
-          [t("Эрл Грей", "Earl Grey", "Earl Grey"), null, 40000],
-          [t("Шир чай", "Shir choy", "Shir choy"), null, 50000,
-            t("", "", "Central Asian tea with milk and butter")],
-        ],
-      },
-    ],
-  },
-  {
-    id: "kitchen",
-    pattern: "lattice",
-    label: t("Кухня", "Oshxona", "Kitchen"),
-    groups: [
-      {
-        title: t("Завтрак TOSH", "TOSH nonushtasi", "TOSH breakfast"),
-        items: [
-          [t("Завтрак TOSH", "TOSH nonushtasi", "TOSH breakfast"), null, 35000,
-            t("горячая лепёшка ½, каймак, джем", "issiq non, qaymoq, jem", "hot flatbread, kaymak (Uzbek clotted cream), jam")],
-        ],
-      },
-      {
-        title: t("Завтраки", "Nonushtalar", "Breakfast"),
-        items: [
-          [t("Горячая катлама, каймак, джем", "Qatlama, qaymoq, jem", "Hot katlama, kaymak, jam"), null, 35000],
-          [t("Шакшука TOSH", "TOSH shakshukasi", "TOSH shakshuka"), null, 70000,
-            t("яйца в томатном соусе, курт, чёрный тмин", "pomidor sousidagi tuxum, qurt, sedana", "eggs in tomato sauce, kurt, nigella seeds")],
-          [t("Яйца TOSH с йогуртом и солёной гранолой", "TOSH tuxumlari", "TOSH eggs with yogurt sauce"), null, 70000,
-            t("", "yogurt sousi va shoʻr granola bilan", "and savoury granola")],
-          [t("Блинчики с курицей и грибами", "Tovuq va qoʻziqorinli blinchiklar", "Chicken and mushroom crepes"), null, 65000,
-            t("в сливочном соусе", "qaymoqli sousda", "in cream sauce")],
-          [t("Драники из кабачка со страчателлой", "Qovoqli draniki strachatella bilan", "Zucchini pancakes with stracciatella"), null, 65000],
-          [t("Пшённая каша с трюфельным кремом", "Trufel kremli tariq boʻtqasi", "Millet porridge with truffle cream"), null, 65000,
-            t("с грибами и луком", "qoʻziqorin va piyoz bilan", "with mushrooms and onion")],
-          [t("Гречневая каша с яйцом и соусом песто", "Tuxum va pesto sousi bilan grechka boʻtqasi", "Buckwheat porridge with egg and pesto"), null, 65000,
-            t("пармезан, кефир", "parmezan, kefir", "parmesan, kefir")],
-        ],
-      },
-      {
-        title: t("Сладкие завтраки", "Shirin nonushtalar", "Sweet breakfast"),
-        items: [
-          [t("Овсяная каша с шоколадом и бананом", "Shokoladli suli boʻtqasi", "Chocolate oatmeal with fried banana"), null, 65000],
-          [t("Кофейный йогурт с чиа и жареным бананом", "Chia va qovurilgan banan bilan qahvali yogurt", "Coffee yogurt with chia and fried banana"), null, 85000,
-            t("гранола, орехи, мёд, корица", "granola, yongʻoq, asal, dolchin", "granola, nuts, honey, cinnamon")],
-          [t("Карамельный тост с сыром", "Karamelli pishloqli tost", "Caramel toast with cheese"), null, 75000,
-            t("бриошь, моцарелла и гауда, сметана", "brioch, motsarella va gauda, smetana", "brioche, mozzarella and gouda, sour cream")],
-          [t("Творожная запеканка с маком", "Tvorog va makli zapekanka", "Cottage cheese bake with poppy seeds"), null, 60000,
-            t("соус из вишни и клюквы", "olcha va klyukva sousi", "cherry and cranberry sauce")],
-          [t("Сырники из рикотты с черничным кремом", "Rikottali sirniklar", "Ricotta pancakes with blueberry cream"), null, 65000,
-            t("", "chernika kremi bilan", "")],
-          [t("Блинчики с яблоком и корицей", "Olma va dolchinli blinchiklar", "Apple and cinnamon crepes"), null, 60000],
-        ],
-      },
-      {
-        title: t("Салаты и боулы", "Salatlar va boullar", "Salads and bowls"),
-        items: [
-          [t("Зелёный салат", "Yashil salat", "Green salad"), null, 90000,
-            t("кабачок, редис, авокадо, брокколи, эдамаме", "qovoqcha, rediska, avokado, brokkoli, edamame", "courgette, radish, avocado, broccoli, edamame")],
-          [t("Протеиновый боул с курицей", "Tovuqli protein boul", "Protein bowl with chicken"), null, 90000,
-            t("булгур, брокколи, нут, кунжутно-имбирный соус", "bulgur, brokkoli, noʻxat, kunjut-zanjabil sousi", "bulgur, broccoli, chickpeas, sesame-ginger dressing")],
-          [t("Протеиновый боул с филе тунца", "Tunetsli protein boul", "Protein bowl with tuna"), null, 150000,
-            t("киноа, батат, авокадо, брокколи", "kinoa, batat, avokado, brokkoli", "quinoa, sweet potato, avocado, broccoli")],
-        ],
-      },
-      {
-        title: t("Сэндвичи", "Sendvichlar", "Sandwiches"),
-        items: [
-          [t("С тунцом", "Tunetsli sendvich", "Tuna sandwich"), null, 100000,
-            t("бриошь, крем-чиз, яйцо, вяленые томаты", "brioch, krem-chiz, tuxum, quritilgan pomidor", "brioche, cream cheese, egg, sun-dried tomatoes")],
-          [t("С курицей", "Tovuqli sendvich", "Chicken sandwich"), null, 100000,
-            t("бриошь, крем-чиз, огурец, грецкий орех, оливки", "brioch, krem-chiz, bodring, yongʻoq, zaytun", "brioche, cream cheese, cucumber, walnuts, olives")],
-        ],
-      },
-      {
-        title: t("Бутерброды на лепёшке", "Non buterbrodlar", "Uzbek flatbread sandwiches"),
-        items: [
-          [t("С мортаделлой", "Mortadellali", "With mortadella"), null, 45000],
-          [t("С лососем", "Lososli", "With salmon"), null, 85000],
-          [t("Со страчателлой и трюфельной пастой", "Strachatella va trufel bilan", "With stracciatella and truffle paste"), null, 95000],
-          [t("С домашней баклажанной икрой", "Baqlajon ikrasi bilan", "With homemade aubergine spread"), null, 45000],
-          [t("С паштетом из куриной печени", "Tovuq jigaridan pashtet bilan", "With chicken liver pâté"), null, 50000],
-          [t("С авокадо и солёной гранолой", "Avokado va shoʻr granola bilan", "With avocado and savoury granola"), null, 80000],
-        ],
-      },
-      {
-        title: t("Добавки к завтраку или салату", "Nonushta yoki salatga qoʻshimchalar", "Add-ons for breakfast or salad"),
-        items: [
-          [t("Сыр гауда", "Gauda pishlogʻi", "Gouda cheese"), [50, "g"], 20000],
-          [t("Мортаделла", "Mortadella", "Mortadella"), [50, "g"], 20000],
-          [t("Куриная грудка", "Tovuq goʻshti", "Baked chicken breast"), [100, "g"], 30000],
-          [t("Филе тунца жареное", "Qovurilgan tunets filesi", "Fried tuna fillet"), [80, "g"], 45000],
-          [t("Креветки", "Krevetkalar", "Fried shrimp"), [50, "g"], 70000],
-          [t("Лосось слабосолёный", "Yengil tuzlangan losos", "Lightly salted salmon"), [50, "g"], 60000],
-          [t("Яйцо", "Tuxum", "Egg"), [1, "pc"], 10000,
-            t("всмятку, омлет или глазунья", "yumshoq qaynatilgan, omlet yoki quymoq", "soft-boiled, omelette or sunny-side up")],
-          [t("Авокадо", "Avokado", "Avocado"), ["½", "pc"], 40000],
-          [t("Салатный микс", "Salat miksi", "Salad mix"), [80, "g"], 40000],
-          [t("Батат фри", "Batat fri", "Sweet potato fries"), [150, "g"], 60000,
-            t("с трюфельным майонезом", "trufelli mayonez bilan", "with truffle mayo")],
-        ],
-      },
-    ],
-  },
-  {
-    id: "desserts",
-    pattern: "cocoa",
-    label: t("Десерты", "Desertlar", "Desserts"),
-    groups: [
-      {
-        title: t("Десерты", "Desertlar", "Desserts"),
-        note: t("цены — на витрине", "narxlar vitrinada", "prices at the counter"),
-        items: [
-          [t("Шоколадное печенье с карамелью и куртом", "Karamel va qurt bilan shokoladli pechenye", "Chocolate cookie with caramel and kurt"), null, null],
-          [t("Овсяное печенье без пшеничной муки", "Bugʻdoy unisiz suli pechenyesi", "Oat cookie without wheat flour"), null, null],
-          [t("Маковый рулет с апельсином", "Apelsinli makli rulet", "Poppy seed roll with orange"), null, null],
-          [t("Чиз-брауни с халвой и чёрным тмином", "Holva va qora sedana bilan chiz-brauni", "Cheese brownie with halva and nigella seeds"), null, null],
-          [t("Медовый торт", "Asalli tort", "Honey cake"), null, null],
-        ],
-      },
-    ],
-  },
-];
 })();

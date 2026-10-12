@@ -78,8 +78,7 @@
   const tabsEl = document.getElementById("menu-tabs");
   const panelsEl = document.getElementById("menu-panels");
 
-  const PHOTOS = window.TOSH_PHOTOS || {};
-  const BAND_SIDE = { coffee: "left", drinks: "right", kitchen: "top", desserts: "bottom" };
+  const BAND_SIDE = { coffee: "left", drinks: "right", kitchen: "top", desserts: "bottom", beans: "top" };
 
   const formatPrice =(n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 
@@ -91,13 +90,12 @@
   }
 
   // Строка меню: фото (или квадратик узора раздела, если фото нет), название, цена, пояснение
-  function renderItem([name, amount, price, desc], pattern) {
+  function renderItem(item, pattern) {
     const li = el("li", "item");
 
-    const photo = PHOTOS[name.ru];
-    if (photo) {
+    if (item.img) {
       const img = el("img", "item__photo");
-      img.src = `img/menu/${photo}.webp`;
+      img.src = `img/menu/${item.img}.webp`;
       img.width = 360;
       img.height = 360;
       img.loading = "lazy";
@@ -112,13 +110,15 @@
 
     const text = el("div", "item__text");
     const head = el("div", "item__head");
-    head.append(el("span", "item__name", name[lang]));
-    if (price) head.append(el("span", "item__price", formatPrice(price)));
+    const name = el("span", "item__name", item.n[lang]);
+    if (item.isNew) name.append(" ", el("span", "item__new", tr("menu.new")));
+    head.append(name);
+    if (item.p) head.append(el("span", "item__price", formatPrice(item.p)));
     text.append(head);
 
     const parts = [];
-    if (amount) parts.push(`${amount[0]} ${UNITS[amount[1]][lang]}`);
-    if (desc && desc[lang]) parts.push(desc[lang]);
+    if (item.a) parts.push(`${item.a[0]} ${UNITS[item.a[1]][lang]}`);
+    if (item.d && item.d[lang]) parts.push(item.d[lang]);
     if (parts.length) text.append(el("span", "item__meta", parts.join(", ")));
     li.append(text);
     return li;
