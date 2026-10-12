@@ -30,9 +30,9 @@
 
   <link rel="preload" href="fonts/commissioner-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="fonts/fonts.css">
-  <link rel="stylesheet" href="styles.css?v=6">
-  <script src="i18n.js?v=6" defer></script>
-  <script src="script.js?v=6" defer></script>
+  <link rel="stylesheet" href="styles.css?v=8">
+  <script src="i18n.js?v=8" defer></script>
+  <script src="script.js?v=8" defer></script>
 </head>
 <body>
   <a class="skip" href="#menu" data-i18n="hero.menu">Смотреть меню</a>
@@ -43,7 +43,7 @@
 
   <header class="top">
     <div class="wrap top__row">
-      <a class="brand" href="#top" aria-label="Tosh qahvaxona">tosh</a>
+      <a class="brand" href="#top" aria-label="Tosh qahvaxona"><img class="brand__logo" src="img/favicon.svg" width="34" height="34" alt="">tosh</a>
       <nav class="top__nav" aria-label="Разделы">
         <a href="#about" data-i18n="nav.about">О нас</a>
         <a href="#atmosphere" data-i18n="atmos.title">Атмосфера</a>
@@ -76,18 +76,19 @@
         </div>
       </div>
 
-      <!-- Три фото из сторис Tosh: фирменный завтрак, бариста-сет и V60 -->
-      <ul class="hero__photos">
-        <li><img src="img/hero-breakfast.webp" width="960" height="1200" alt="Завтрак TOSH: горячая лепёшка, каймак и джем на стальном подносе" data-i18n-alt="hero.alt1" fetchpriority="high"></li>
-        <li><img src="img/hero-set.webp" width="960" height="1200" alt="Бариста-сет: эспрессо, фильтр и флэт уайт" data-i18n-alt="hero.alt2"></li>
-        <li><img src="img/hero-v60.webp" width="960" height="1200" alt="Кофе V60 на стальном подносе" data-i18n-alt="hero.alt3"></li>
-      </ul>
+      <!-- Зал Tosh со стеной барельефов (фото гостя с Google Карт, 1800 px) -->
+      <figure class="hero__photo">
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/hero-wide.webp" width="1800" height="900">
+          <img src="img/hero-tall.webp" width="1080" height="1350" alt="Светлый зал Tosh: стена гипсовых барельефов с надписью tosh, кресла и барные табуреты" data-i18n-alt="hero.alt" fetchpriority="high">
+        </picture>
+      </figure>
     </section>
 
     <!-- О кофейне -->
     <section class="about wrap" id="about" aria-labelledby="about-title">
       <figure class="about__photo">
-        <img src="img/bar.webp" width="699" height="932" alt="Гипсовые барельефы с надписью tosh в зале кофейни" data-i18n-alt="about.alt" loading="lazy">
+        <img src="img/bar.webp" width="900" height="1200" alt="Яйца TOSH и кофе на столе, рядом синие кресла mid‑century" data-i18n-alt="about.alt" loading="lazy">
       </figure>
       <div class="about__body">
         <h2 id="about-title" data-i18n="about.title">Ташкент, который мы любим</h2>
@@ -159,6 +160,7 @@
         <h2 id="desserts-title" data-i18n="desserts.title">Десерты</h2>
         <p class="section-lead" data-i18n="desserts.lead">Печём к кофе: печенье, рулеты, брауни и торты.</p>
       </div>
+      <div class="band band--cocoa desserts__band" aria-hidden="true"></div>
       <ul class="dishes dishes--five">
         <li class="dish dish--small">
           <img src="img/d-cookie.webp" width="720" height="900" alt="" loading="lazy">
@@ -236,7 +238,7 @@
   <footer class="footer">
     <div class="footer__band" aria-hidden="true"></div>
     <div class="wrap footer__row">
-      <p class="brand brand--small">tosh</p>
+      <p class="brand brand--small"><img class="brand__logo" src="img/favicon.svg" width="28" height="28" alt="">tosh</p>
       <p><span data-i18n="footer.city">Ташкент</span>, Avliyo Ota, 128</p>
       <p><a class="link" href="https://www.instagram.com/tosh.coffee/" target="_blank" rel="noopener">@tosh.coffee</a></p>
     </div>

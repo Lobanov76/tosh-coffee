@@ -28,9 +28,7 @@ window.TOSH_TEXT = {
   ),
   "hero.menu": t("Смотреть меню", "Menyuni koʻrish", "See the menu"),
   "hero.route": t("Как добраться", "Qanday borish", "Get directions"),
-  "hero.alt1": t("Завтрак TOSH: горячая лепёшка, каймак и джем на стальном подносе", "TOSH nonushtasi: poʻlat patnisda issiq non, qaymoq va jem", "TOSH breakfast: hot flatbread, kaymak and jam on a steel tray"),
-  "hero.alt2": t("Бариста-сет: эспрессо, фильтр и флэт уайт", "Barista set: espresso, filtr va flat white", "Barista set: espresso, filter and flat white"),
-  "hero.alt3": t("Кофе V60 на стальном подносе", "Poʻlat patnisda V60 qahva", "V60 coffee on a steel tray"),
+  "hero.alt": t("Светлый зал Tosh: стена гипсовых барельефов с надписью tosh, кресла и барные табуреты", "Tosh yorugʻ zali: tosh yozuvli gips barelyeflar devori, kreslolar va bar kursilari", "The bright Tosh hall: a wall of plaster reliefs with the word tosh, armchairs and bar stools"),
 
   "status.open": t("Открыто до 21:00", "Ochiq, 21:00 gacha", "Open until 21:00"),
   "status.kitchen": t("кухня до 20:00", "oshxona 20:00 gacha", "kitchen until 20:00"),
@@ -48,7 +46,7 @@ window.TOSH_TEXT = {
     "«Tosh» — tosh, Toshkent esa — tosh shahar.",
     "In Uzbek, tosh means stone, and Toshkent is the city of stone."
   ),
-  "about.alt": t("Гипсовые барельефы с надписью tosh в зале кофейни", "Qahvaxona zalidagi tosh yozuvli gips barelyeflar", "Plaster reliefs with the word tosh in the café hall"),
+  "about.alt": t("Яйца TOSH и кофе на столе, рядом синие кресла mid‑century", "Stolda TOSH tuxumlari va qahva, yonida koʻk mid‑century kreslolar", "TOSH eggs and coffee on the table, with blue mid‑century armchairs"),
   "f1.title": t("Своя обжарка", "Oʻzimiz qovuramiz", "Roasted in-house"),
   "f1.text": t(
     "В основе — зерно собственной обжарки и современное оборудование. Эспрессо, V60, батч-брю и фильтр-шот.",
@@ -415,7 +413,7 @@ window.TOSH_MENU = [
   },
   {
     id: "desserts",
-    pattern: "rose",
+    pattern: "cocoa",
     label: t("Десерты", "Desertlar", "Desserts"),
     groups: [
       {
