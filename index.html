@@ -28,12 +28,14 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-src https://yandex.uz; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
+  <link rel="preload" as="image" href="img/hero-tall.webp" media="(max-width: 767px)" fetchpriority="high">
+  <link rel="preload" as="image" href="img/hero-wide.webp" media="(min-width: 768px)" fetchpriority="high">
   <link rel="preload" href="fonts/commissioner-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="fonts/fonts.css">
-  <link rel="stylesheet" href="styles.css?v=16">
-  <script src="i18n.js?v=16" defer></script>
+  <link rel="stylesheet" href="styles.css?v=17">
+  <script src="i18n.js?v=17" defer></script>
   <script src="menu.js?v=2" defer></script>
-  <script src="script.js?v=16" defer></script>
+  <script src="script.js?v=17" defer></script>
 </head>
 <body>
   <a class="skip" href="#menu" data-i18n="hero.menu">Смотреть меню</a>
@@ -80,8 +82,8 @@
       <!-- Зал Tosh со стеной барельефов (фото гостя с Google Карт, 1800 px) -->
       <figure class="hero__photo">
         <picture>
-          <source media="(min-width: 768px)" srcset="img/hero-wide.webp" width="1800" height="900">
-          <img src="img/hero-tall.webp" width="1080" height="1350" alt="Светлый зал Tosh: стена гипсовых барельефов с надписью tosh, кресла и барные табуреты" data-i18n-alt="hero.alt" fetchpriority="high">
+          <source media="(min-width: 768px)" srcset="img/hero-wide.webp" width="1600" height="800">
+          <img src="img/hero-tall.webp" width="900" height="1125" alt="Светлый зал Tosh: стена гипсовых барельефов с надписью tosh, кресла и барные табуреты" data-i18n-alt="hero.alt" fetchpriority="high">
         </picture>
       </figure>
     </section>
@@ -89,7 +91,7 @@
     <!-- О кофейне -->
     <section class="about wrap" id="about" aria-labelledby="about-title">
       <figure class="about__photo">
-        <img src="img/bar.webp" width="900" height="1200" alt="Яйца TOSH и кофе на столе, рядом синие кресла mid‑century" data-i18n-alt="about.alt" loading="lazy">
+        <img src="img/bar.webp" width="750" height="1000" alt="Яйца TOSH и кофе на столе, рядом синие кресла mid‑century" data-i18n-alt="about.alt" loading="lazy">
       </figure>
       <div class="about__body">
         <h2 id="about-title" data-i18n="about.title">Ташкент, который мы любим</h2>
@@ -112,12 +114,12 @@
           <p class="section-lead" data-i18n="atmos.lead">Дерево, металл, зелень и мебель в духе mid‑century.</p>
         </div>
         <ul class="gallery">
-          <li><figure><img src="img/atm-relief.webp" width="720" height="900" alt="" loading="lazy"><figcaption data-i18n="atmos.relief">Барельефы в зале</figcaption></figure></li>
+          <li><figure><img src="img/atm-relief.webp" width="600" height="750" alt="" loading="lazy"><figcaption data-i18n="atmos.relief">Барельефы в зале</figcaption></figure></li>
           <li><figure><img src="img/atm-bar.webp" width="382" height="478" alt="" loading="lazy"><figcaption data-i18n="atmos.bar">Световой куб над баром</figcaption></figure></li>
-          <li><figure><img src="img/atm-hall.webp" width="720" height="900" alt="" loading="lazy"><figcaption data-i18n="atmos.hall">Светлый зал у окон</figcaption></figure></li>
-          <li><figure><img src="img/atm-lamps.webp" width="720" height="900" alt="" loading="lazy"><figcaption data-i18n="atmos.lamps">За длинным столом</figcaption></figure></li>
-          <li><figure><img src="img/atm-evening.webp" width="720" height="900" alt="" loading="lazy"><figcaption data-i18n="atmos.evening">Вечером</figcaption></figure></li>
-          <li><figure><img src="img/atm-terrace.webp" width="720" height="900" alt="" loading="lazy"><figcaption data-i18n="atmos.terrace">Летняя терраса</figcaption></figure></li>
+          <li><figure><img src="img/atm-hall.webp" width="600" height="750" alt="" loading="lazy"><figcaption data-i18n="atmos.hall">Светлый зал у окон</figcaption></figure></li>
+          <li><figure><img src="img/atm-lamps.webp" width="600" height="750" alt="" loading="lazy"><figcaption data-i18n="atmos.lamps">За длинным столом</figcaption></figure></li>
+          <li><figure><img src="img/atm-evening.webp" width="600" height="750" alt="" loading="lazy"><figcaption data-i18n="atmos.evening">Вечером</figcaption></figure></li>
+          <li><figure><img src="img/atm-terrace.webp" width="600" height="750" alt="" loading="lazy"><figcaption data-i18n="atmos.terrace">Летняя терраса</figcaption></figure></li>
         </ul>
       </div>
     </section>
@@ -133,22 +135,22 @@
       </div>
       <ul class="dishes">
         <li class="dish">
-          <img src="img/k-tosh.webp" width="720" height="900" alt="" loading="lazy">
+          <img src="img/k-tosh.webp" width="600" height="750" alt="" loading="lazy">
           <div class="dish__head"><h3 data-i18n="d1.name">Завтрак TOSH</h3><span class="dish__price">35&nbsp;000</span></div>
           <p data-i18n="d1.text">Горячая лепёшка, каймак и джем. Фишка — в простоте</p>
         </li>
         <li class="dish">
-          <img src="img/k-shakshuka.webp" width="720" height="900" alt="" loading="lazy">
+          <img src="img/k-shakshuka.webp" width="600" height="750" alt="" loading="lazy">
           <div class="dish__head"><h3 data-i18n="d2.name">Шакшука TOSH</h3><span class="dish__price">70&nbsp;000</span></div>
           <p data-i18n="d2.text">Яйца в томатном соусе с куртом и чёрным тмином, к ней лепёшка</p>
         </li>
         <li class="dish">
-          <img src="img/k-yogurt.webp" width="720" height="900" alt="" loading="lazy">
+          <img src="img/k-yogurt.webp" width="600" height="750" alt="" loading="lazy">
           <div class="dish__head"><h3 data-i18n="d3.name">Кофейный йогурт с чиа</h3><span class="dish__price">85&nbsp;000</span></div>
           <p data-i18n="d3.text">Жареный банан, гранола, орехи, мёд и корица</p>
         </li>
         <li class="dish">
-          <img src="img/k-toast.webp" width="720" height="900" alt="" loading="lazy">
+          <img src="img/k-toast.webp" width="600" height="750" alt="" loading="lazy">
           <div class="dish__head"><h3 data-i18n="d4.name">Карамельный тост с сыром</h3><span class="dish__price">75&nbsp;000</span></div>
           <p data-i18n="d4.text">Бриошь, моцарелла и гауда, карамель из мёда, сметана</p>
         </li>
@@ -163,23 +165,23 @@
       </div>
       <ul class="dishes dishes--five">
         <li class="dish dish--small">
-          <img src="img/d-cookie.webp" width="720" height="900" alt="" loading="lazy">
+          <img src="img/d-cookie.webp" width="600" height="750" alt="" loading="lazy">
           <div class="dish__head"><h3 data-i18n="ds1">Шоколадное печенье с карамелью и куртом</h3><span class="dish__price">40&nbsp;000</span></div>
         </li>
         <li class="dish dish--small">
-          <img src="img/d-oat.webp" width="720" height="900" alt="" loading="lazy">
+          <img src="img/d-oat.webp" width="600" height="750" alt="" loading="lazy">
           <div class="dish__head"><h3 data-i18n="ds2">Овсяное печенье без пшеничной муки</h3><span class="dish__price">25&nbsp;000</span></div>
         </li>
         <li class="dish dish--small">
-          <img src="img/d-roll.webp" width="720" height="900" alt="" loading="lazy">
+          <img src="img/d-roll.webp" width="600" height="750" alt="" loading="lazy">
           <div class="dish__head"><h3 data-i18n="ds3">Маковый рулет с апельсином</h3><span class="dish__price">30&nbsp;000</span></div>
         </li>
         <li class="dish dish--small">
-          <img src="img/d-brownie.webp" width="720" height="900" alt="" loading="lazy">
+          <img src="img/d-brownie.webp" width="600" height="750" alt="" loading="lazy">
           <div class="dish__head"><h3 data-i18n="ds4">Чиз-брауни с халвой и чёрным тмином</h3><span class="dish__price">55&nbsp;000</span></div>
         </li>
         <li class="dish dish--small">
-          <img src="img/d-honey.webp" width="720" height="900" alt="" loading="lazy">
+          <img src="img/d-honey.webp" width="600" height="750" alt="" loading="lazy">
           <div class="dish__head"><h3 data-i18n="ds5">Медовый торт</h3><span class="dish__price">45&nbsp;000</span></div>
         </li>
       </ul>

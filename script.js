@@ -95,8 +95,8 @@
     if (item.img) {
       const img = el("img", "item__photo");
       img.src = `img/menu/${item.img}.webp`;
-      img.width = 360;
-      img.height = 360;
+      img.width = 240;
+      img.height = 240;
       img.loading = "lazy";
       img.decoding = "async";
       img.alt = "";
