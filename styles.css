@@ -480,7 +480,12 @@ h3 {
 .band--rose { background-image: url("img/pattern-rose.webp"); }
 .band--ochre { background-image: url("img/pattern-ochre.webp"); }
 .band--lattice { background-image: url("img/pattern-lattice.webp"); }
+/* Узор десертов крупный: в полосе видна середина — граница розового и коричневого */
 .band--cocoa { background-image: url("img/pattern-cocoa.webp"); }
+.band.band--cocoa,
+.desserts__band { background-size: auto 240px; background-position: center; }
+.tab__swatch.band--cocoa,
+.item__photo--empty.band--cocoa { background-size: auto 180px; background-position: center; }
 .desserts__band { margin-top: 2rem; height: 40px; }
 /* Узор кухни отражён вниз */
 .panel .band--lattice { transform: scaleY(-1); }
