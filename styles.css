@@ -505,7 +505,7 @@ body { padding-bottom: 58px; }
   align-items: center;
   gap: 0.75rem;
   min-height: 56px;
-  padding: 0 1.25rem 0 0.5rem;
+  padding: 0 1.25rem;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--surface);

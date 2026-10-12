@@ -35,7 +35,6 @@ window.TOSH_MENU = [
             d: t("эспрессо, сывороточный протеин, молоко", "espresso, zardob proteini, sut", "espresso, whey protein, milk") },
           { n: t("Эспрессо-тоник", "Espresso-tonik", "Espresso tonic"), a: [350, "ml"], p: 50000, img: "espresso-tonic" },
           { n: t("Айс латте", "Ays-latte", "Iced latte"), a: [350, "ml"], p: 50000, img: "iced-latte" },
-          { n: t("Айс капучино", "Ays-cappuccino", "Iced cappuccino"), a: [350, "ml"], p: 50000 },
           { n: t("Какао", "Kakao", "Cocoa"), a: [250, "ml"], p: 45000, img: "cocoa" },
           { n: t("Мятный какао", "Yalpizli kakao", "Mint cocoa"), a: [250, "ml"], p: 45000, img: "mint-cocoa", isNew: true,
             d: t("какао, молоко, мята", "kakao, sut, yalpiz", "cocoa, milk, mint") },
