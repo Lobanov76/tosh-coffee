@@ -28,11 +28,9 @@ window.TOSH_TEXT = {
   ),
   "hero.menu": t("Смотреть меню", "Menyuni koʻrish", "See the menu"),
   "hero.route": t("Как добраться", "Qanday borish", "Get directions"),
-  "hero.alt": t(
-    "Гипсовые барельефы с надписью tosh во всю стену зала",
-    "Zal devoridagi tosh yozuvli gips barelyeflar",
-    "Plaster reliefs with the word tosh across the café wall"
-  ),
+  "hero.alt1": t("Завтрак TOSH: горячая лепёшка, каймак и джем на стальном подносе", "TOSH nonushtasi: poʻlat patnisda issiq non, qaymoq va jem", "TOSH breakfast: hot flatbread, kaymak and jam on a steel tray"),
+  "hero.alt2": t("Бариста-сет: эспрессо, фильтр и флэт уайт", "Barista set: espresso, filtr va flat white", "Barista set: espresso, filter and flat white"),
+  "hero.alt3": t("Кофе V60 на стальном подносе", "Poʻlat patnisda V60 qahva", "V60 coffee on a steel tray"),
 
   "status.open": t("Открыто до 21:00", "Ochiq, 21:00 gacha", "Open until 21:00"),
   "status.kitchen": t("кухня до 20:00", "oshxona 20:00 gacha", "kitchen until 20:00"),
@@ -50,11 +48,7 @@ window.TOSH_TEXT = {
     "«Tosh» — tosh, Toshkent esa — tosh shahar.",
     "In Uzbek, tosh means stone, and Toshkent is the city of stone."
   ),
-  "about.alt": t(
-    "Барная стойка Tosh с абажурами и вывеской",
-    "Tosh bar peshtaxtasi, chiroqlar va yozuv",
-    "The Tosh bar with lampshades and sign"
-  ),
+  "about.alt": t("Гипсовые барельефы с надписью tosh в зале кофейни", "Qahvaxona zalidagi tosh yozuvli gips barelyeflar", "Plaster reliefs with the word tosh in the café hall"),
   "f1.title": t("Своя обжарка", "Oʻzimiz qovuramiz", "Roasted in-house"),
   "f1.text": t(
     "В основе — зерно собственной обжарки и современное оборудование. Эспрессо, V60, батч-брю и фильтр-шот.",
@@ -86,10 +80,10 @@ window.TOSH_TEXT = {
     "Yogʻoch, metall, koʻkalamzor va mid‑century uslubidagi mebel. Shahar syujetli barelyeflar, vinil va poʻlat patnislar. Kunduzi bu yerda ishlashadi va uchrashishadi, kechqurun plastinkalar ostida qahva ichishadi.",
     "Wood, metal, greenery and mid‑century furniture. Reliefs of city scenes, vinyl and steel trays. By day people work and meet here; in the evening, it is coffee and records."
   ),
-  "atmos.relief": t("Барельефы в зале", "Zaldagi barelyeflar", "Reliefs in the hall"),
-  "atmos.bar": t("Бар и кресла mid‑century", "Bar va mid‑century kreslolar", "The bar and mid‑century armchairs"),
+  "atmos.relief": t("Барельефы и гости", "Barelyeflar va mehmonlar", "Reliefs and guests"),
+  "atmos.bar": t("Бар с утра", "Ertalabki bar", "The bar in the morning"),
   "atmos.hall": t("Светлый зал у окон", "Deraza yonidagi yorugʻ zal", "The bright hall by the windows"),
-  "atmos.lamps": t("Свет над баром", "Bar ustidagi chiroqlar", "Lights over the bar"),
+  "atmos.lamps": t("Днём в зале", "Kunduzi zalda", "The hall by day"),
   "atmos.evening": t("Вечером", "Kechqurun", "In the evening"),
   "atmos.terrace": t("Летняя терраса", "Yozgi ayvon", "Summer terrace"),
 

@@ -30,9 +30,9 @@
 
   <link rel="preload" href="fonts/commissioner-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="fonts/fonts.css">
-  <link rel="stylesheet" href="styles.css?v=5">
-  <script src="i18n.js?v=5" defer></script>
-  <script src="script.js?v=5" defer></script>
+  <link rel="stylesheet" href="styles.css?v=6">
+  <script src="i18n.js?v=6" defer></script>
+  <script src="script.js?v=6" defer></script>
 </head>
 <body>
   <a class="skip" href="#menu" data-i18n="hero.menu">Смотреть меню</a>
@@ -76,18 +76,18 @@
         </div>
       </div>
 
-      <figure class="hero__photo">
-        <picture>
-          <source media="(min-width: 768px)" srcset="img/relief-wide.webp" width="1280" height="540">
-          <img src="img/relief-tall.webp" width="698" height="820" alt="Гипсовые барельефы с надписью tosh во всю стену зала" data-i18n-alt="hero.alt" fetchpriority="high">
-        </picture>
-      </figure>
+      <!-- Три фото из сторис Tosh: фирменный завтрак, бариста-сет и V60 -->
+      <ul class="hero__photos">
+        <li><img src="img/hero-breakfast.webp" width="960" height="1200" alt="Завтрак TOSH: горячая лепёшка, каймак и джем на стальном подносе" data-i18n-alt="hero.alt1" fetchpriority="high"></li>
+        <li><img src="img/hero-set.webp" width="960" height="1200" alt="Бариста-сет: эспрессо, фильтр и флэт уайт" data-i18n-alt="hero.alt2"></li>
+        <li><img src="img/hero-v60.webp" width="960" height="1200" alt="Кофе V60 на стальном подносе" data-i18n-alt="hero.alt3"></li>
+      </ul>
     </section>
 
     <!-- О кофейне -->
     <section class="about wrap" id="about" aria-labelledby="about-title">
       <figure class="about__photo">
-        <img src="img/bar.webp" width="720" height="1100" alt="Барная стойка Tosh с абажурами и вывеской" data-i18n-alt="about.alt" loading="lazy">
+        <img src="img/bar.webp" width="699" height="932" alt="Гипсовые барельефы с надписью tosh в зале кофейни" data-i18n-alt="about.alt" loading="lazy">
       </figure>
       <div class="about__body">
         <h2 id="about-title" data-i18n="about.title">Ташкент, который мы любим</h2>
@@ -113,7 +113,7 @@
           <li><figure><img src="img/atm-relief.webp" width="720" height="900" alt="" loading="lazy"><figcaption data-i18n="atmos.relief">Барельефы в зале</figcaption></figure></li>
           <li><figure><img src="img/atm-bar.webp" width="720" height="900" alt="" loading="lazy"><figcaption data-i18n="atmos.bar">Бар и кресла mid‑century</figcaption></figure></li>
           <li><figure><img src="img/atm-hall.webp" width="720" height="900" alt="" loading="lazy"><figcaption data-i18n="atmos.hall">Светлый зал у окон</figcaption></figure></li>
-          <li><figure><img src="img/atm-lamps.webp" width="591" height="740" alt="" loading="lazy"><figcaption data-i18n="atmos.lamps">Свет над баром</figcaption></figure></li>
+          <li><figure><img src="img/atm-lamps.webp" width="720" height="900" alt="" loading="lazy"><figcaption data-i18n="atmos.lamps">Свет над баром</figcaption></figure></li>
           <li><figure><img src="img/atm-evening.webp" width="720" height="900" alt="" loading="lazy"><figcaption data-i18n="atmos.evening">Вечером</figcaption></figure></li>
           <li><figure><img src="img/atm-terrace.webp" width="720" height="900" alt="" loading="lazy"><figcaption data-i18n="atmos.terrace">Летняя терраса</figcaption></figure></li>
         </ul>

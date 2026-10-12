@@ -281,9 +281,15 @@ h3 {
   gap: 0.75rem;
 }
 
-.hero__photo img {
+/* Три фото из сторис. На телефоне — одно (завтрак TOSH), на планшете и ПК — все три в ряд */
+.hero__photos {
+  display: grid;
+  gap: 0.75rem;
+}
+.hero__photos li:not(:first-child) { display: none; }
+.hero__photos img {
   width: 100%;
-  aspect-ratio: 698 / 820;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
   border-radius: var(--radius);
   background: var(--line);
@@ -671,7 +677,8 @@ h3 {
   .top__nav { display: flex; }
   .lang { margin-left: 0; }
 
-  .hero__photo img { aspect-ratio: 1280 / 540; }
+  .hero__photos { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+  .hero__photos li:not(:first-child) { display: block; }
   .hero { gap: 2.5rem; }
   .wordmark__word { font-size: clamp(5.5rem, 17vw, 13rem); }
   /* На широком экране: слово, под ним текст и кнопки в одну строку, ниже фото */
