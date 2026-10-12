@@ -79,7 +79,7 @@ window.TOSH_TEXT = {
     "Wood, metal, greenery and mid‑century furniture. Reliefs of city scenes, vinyl and steel trays. By day people work and meet here; in the evening, it is coffee and records."
   ),
   "atmos.relief": t("Барельефы и гости", "Barelyeflar va mehmonlar", "Reliefs and guests"),
-  "atmos.bar": t("Бар с утра", "Ertalabki bar", "The bar in the morning"),
+  "atmos.bar": t("Световой куб над баром", "Bar ustidagi yorugʻ kub", "The light box over the bar"),
   "atmos.hall": t("Светлый зал у окон", "Deraza yonidagi yorugʻ zal", "The bright hall by the windows"),
   "atmos.lamps": t("За длинным столом", "Uzun stol atrofida", "At the long table"),
   "atmos.evening": t("Вечером", "Kechqurun", "In the evening"),
