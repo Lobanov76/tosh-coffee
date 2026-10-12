@@ -79,6 +79,7 @@
   const panelsEl = document.getElementById("menu-panels");
 
   const PHOTOS = window.TOSH_PHOTOS || {};
+  const BAND_SIDE = { coffee: "left", drinks: "right", kitchen: "top", desserts: "bottom" };
 
   const formatPrice =(n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 
@@ -150,9 +151,18 @@
       panel.tabIndex = 0;
       panel.hidden = !selected;
 
+      // Лента узора, как в печатном меню: у кофе — слева, у матчи и чая — справа,
+      // у кухни — сверху, у десертов — снизу. На телефоне боковые ленты становятся верхними
+      const side = BAND_SIDE[section.id] || "top";
+      panel.classList.add(`panel--${side}`);
       const band = el("div", `band band--${section.pattern}`);
       band.setAttribute("aria-hidden", "true");
-      panel.append(band);
+      if (side !== "bottom") panel.append(band);
+      if (side === "left" || side === "right") {
+        const strip = el("div", `strip strip--${section.pattern}`);
+        strip.setAttribute("aria-hidden", "true");
+        panel.append(strip);
+      }
 
       const groups = el("div", "groups");
       section.groups.forEach((group) => {
@@ -169,6 +179,7 @@
         groups.append(box);
       });
       panel.append(groups);
+      if (side === "bottom") panel.append(band);
       panelsEl.append(panel);
     });
   }

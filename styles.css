@@ -482,13 +482,22 @@ h3 {
 .band--lattice { background-image: url("img/pattern-lattice.webp"); }
 /* Узор десертов крупный: в полосе видна середина — граница розового и коричневого */
 .band--cocoa { background-image: url("img/pattern-cocoa.webp"); }
-.band.band--cocoa,
-.desserts__band { background-size: auto 240px; background-position: center; }
+.band.band--cocoa { background-size: auto 240px; background-position: center; }
 .tab__swatch.band--cocoa,
 .item__photo--empty.band--cocoa { background-size: auto 180px; background-position: center; }
-.desserts__band { margin-top: 2rem; height: 40px; }
 /* Узор кухни отражён вниз */
 .panel .band--lattice { transform: scaleY(-1); }
+.panel--bottom .band { margin-top: 0.5rem; }
+
+/* Вертикальная лента узора сбоку — на планшете и компьютере */
+.strip {
+  display: none;
+  border-radius: var(--radius);
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+}
+.strip--rose { background-image: url("img/pattern-rose-v.webp"); }
+.strip--ochre { background-image: url("img/pattern-ochre-v.webp"); }
 
 .groups { margin-top: 2.5rem; }
 
@@ -726,6 +735,25 @@ h3 {
   .dishes--five { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 
   .item { grid-template-columns: 88px minmax(0, 1fr); gap: 1.25rem; }
+
+  /* Меню: у «Кофе» лента слева, у «Матча и чай» — справа */
+  .panel--left,
+  .panel--right {
+    display: grid;
+    grid-template-columns: 96px minmax(0, 1fr);
+    column-gap: 3.5rem;
+  }
+  .panel--right { grid-template-columns: minmax(0, 1fr) 96px; }
+  .panel--left[hidden],
+  .panel--right[hidden] { display: none; }
+  .panel--left .band,
+  .panel--right .band { display: none; }
+  .panel--left .strip,
+  .panel--right .strip { display: block; grid-row: 1; }
+  .panel--right .strip { grid-column: 2; }
+  .panel--left .groups,
+  .panel--right .groups { grid-row: 1; margin-top: 0; }
+  .panel--right .groups { grid-column: 1; }
   .item__photo { width: 88px; height: 88px; }
 
   .groups {
