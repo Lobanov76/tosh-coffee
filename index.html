@@ -25,23 +25,28 @@
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Защита: скрипты, стили, шрифты и фото — только с этого же сайта -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-src https://yandex.uz; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <link rel="preload" href="fonts/commissioner-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="fonts/fonts.css">
-  <link rel="stylesheet" href="styles.css?v=3">
-  <script src="i18n.js?v=3" defer></script>
-  <script src="script.js?v=3" defer></script>
+  <link rel="stylesheet" href="styles.css?v=5">
+  <script src="i18n.js?v=5" defer></script>
+  <script src="script.js?v=5" defer></script>
 </head>
 <body>
   <a class="skip" href="#menu" data-i18n="hero.menu">Смотреть меню</a>
+
+  <!-- Ленты традиционного узора Tosh по краям страницы, сверху донизу -->
+  <div class="edge edge--left" aria-hidden="true"></div>
+  <div class="edge edge--right" aria-hidden="true"></div>
 
   <header class="top">
     <div class="wrap top__row">
       <a class="brand" href="#top" aria-label="Tosh qahvaxona">tosh</a>
       <nav class="top__nav" aria-label="Разделы">
         <a href="#about" data-i18n="nav.about">О нас</a>
+        <a href="#atmosphere" data-i18n="atmos.title">Атмосфера</a>
         <a href="#menu" data-i18n="nav.menu">Меню</a>
         <a href="#visit" data-i18n="nav.visit">Адрес</a>
       </nav>
@@ -79,12 +84,12 @@
       </figure>
     </section>
 
-    <!-- О кофейне: фото до левого края экрана -->
-    <section class="about split" id="about" aria-labelledby="about-title">
-      <figure class="split__photo">
-        <img src="img/bar.webp" width="720" height="1280" alt="Барная стойка Tosh с абажурами и вывеской" data-i18n-alt="about.alt" loading="lazy">
+    <!-- О кофейне -->
+    <section class="about wrap" id="about" aria-labelledby="about-title">
+      <figure class="about__photo">
+        <img src="img/bar.webp" width="720" height="1100" alt="Барная стойка Tosh с абажурами и вывеской" data-i18n-alt="about.alt" loading="lazy">
       </figure>
-      <div class="split__body">
+      <div class="about__body">
         <h2 id="about-title" data-i18n="about.title">Ташкент, который мы любим</h2>
         <p class="about__text" data-i18n="about.text">Tosh — кофейня про кофе, город и детали.</p>
         <p class="about__name" data-i18n="about.name">«Тош» по-узбекски — камень, а Тошкент — каменный город.</p>
@@ -97,67 +102,114 @@
       </div>
     </section>
 
-    <!-- Кухня: текст и фирменный завтрак слева, фото блюд до правого края.
-         На телефоне фото листаются пальцем -->
-    <section class="kitchen" aria-labelledby="kitchen-title">
-      <div class="kitchen__intro">
+    <!-- Атмосфера: фото зала -->
+    <section class="atmos" id="atmosphere" aria-labelledby="atmos-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="atmos-title" data-i18n="atmos.title">Атмосфера</h2>
+          <p class="section-lead" data-i18n="atmos.lead">Дерево, металл, зелень и мебель в духе mid‑century.</p>
+        </div>
+        <ul class="gallery">
+          <li><figure><img src="img/atm-relief.webp" width="720" height="900" alt="" loading="lazy"><figcaption data-i18n="atmos.relief">Барельефы в зале</figcaption></figure></li>
+          <li><figure><img src="img/atm-bar.webp" width="720" height="900" alt="" loading="lazy"><figcaption data-i18n="atmos.bar">Бар и кресла mid‑century</figcaption></figure></li>
+          <li><figure><img src="img/atm-hall.webp" width="720" height="900" alt="" loading="lazy"><figcaption data-i18n="atmos.hall">Светлый зал у окон</figcaption></figure></li>
+          <li><figure><img src="img/atm-lamps.webp" width="591" height="740" alt="" loading="lazy"><figcaption data-i18n="atmos.lamps">Свет над баром</figcaption></figure></li>
+          <li><figure><img src="img/atm-evening.webp" width="720" height="900" alt="" loading="lazy"><figcaption data-i18n="atmos.evening">Вечером</figcaption></figure></li>
+          <li><figure><img src="img/atm-terrace.webp" width="720" height="900" alt="" loading="lazy"><figcaption data-i18n="atmos.terrace">Летняя терраса</figcaption></figure></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Кухня: четыре блюда с фото, описанием и ценой -->
+    <section class="kitchen wrap" aria-labelledby="kitchen-title">
+      <div class="section-head">
         <h2 id="kitchen-title" data-i18n="kitchen.title">Кухня</h2>
-        <p class="section-lead" data-i18n="kitchen.lead">Завтраки, салаты и лёгкие блюда.</p>
-        <div class="signature">
-          <div class="signature__head">
-            <h3 data-i18n="sig.title">Завтрак TOSH</h3>
-            <span class="signature__price">35&nbsp;000</span>
-          </div>
-          <p data-i18n="sig.text">Традиционный узбекский завтрак: горячая лепёшка, каймак и джем.</p>
+        <div>
+          <p class="section-lead" data-i18n="kitchen.lead">Завтраки весь день, салаты и лёгкие блюда.</p>
+          <a class="btn kitchen__all" href="#menu" data-open-tab="kitchen" data-i18n="kitchen.all">Всё меню кухни</a>
         </div>
       </div>
       <ul class="dishes">
-        <li><figure><img src="img/shakshuka.webp" width="720" height="900" alt="" loading="lazy"><figcaption data-i18n="photo.shakshuka">Шакшука TOSH</figcaption></figure></li>
-        <li><figure><img src="img/yogurt.webp" width="720" height="900" alt="" loading="lazy"><figcaption data-i18n="photo.yogurt">Кофейный йогурт с чиа и жареным бананом</figcaption></figure></li>
-        <li><figure><img src="img/toast.webp" width="590" height="740" alt="" loading="lazy"><figcaption data-i18n="photo.toast">Карамельный тост с сыром</figcaption></figure></li>
-        <li><figure><img src="img/barista-set.webp" width="720" height="900" alt="" loading="lazy"><figcaption data-i18n="photo.set">Бариста-сет</figcaption></figure></li>
-        <li><figure><img src="img/vitrine.webp" width="720" height="1000" alt="" loading="lazy"><figcaption data-i18n="photo.vitrine">Витрина с десертами</figcaption></figure></li>
+        <li class="dish">
+          <img src="img/k-tosh.webp" width="720" height="900" alt="" loading="lazy">
+          <div class="dish__head"><h3 data-i18n="d1.name">Завтрак TOSH</h3><span class="dish__price">35&nbsp;000</span></div>
+          <p data-i18n="d1.text">Горячая лепёшка, каймак и джем. Фишка — в простоте</p>
+        </li>
+        <li class="dish">
+          <img src="img/k-shakshuka.webp" width="720" height="900" alt="" loading="lazy">
+          <div class="dish__head"><h3 data-i18n="d2.name">Шакшука TOSH</h3><span class="dish__price">70&nbsp;000</span></div>
+          <p data-i18n="d2.text">Яйца в томатном соусе с куртом и чёрным тмином, к ней лепёшка</p>
+        </li>
+        <li class="dish">
+          <img src="img/k-yogurt.webp" width="720" height="900" alt="" loading="lazy">
+          <div class="dish__head"><h3 data-i18n="d3.name">Кофейный йогурт с чиа</h3><span class="dish__price">85&nbsp;000</span></div>
+          <p data-i18n="d3.text">Жареный банан, гранола, орехи, мёд и корица</p>
+        </li>
+        <li class="dish">
+          <img src="img/k-toast.webp" width="720" height="900" alt="" loading="lazy">
+          <div class="dish__head"><h3 data-i18n="d4.name">Карамельный тост с сыром</h3><span class="dish__price">75&nbsp;000</span></div>
+          <p data-i18n="d4.text">Бриошь, моцарелла и гауда, карамель из мёда, сметана</p>
+        </li>
       </ul>
     </section>
 
-    <!-- Меню: вкладки и позиции собирает script.js из i18n.js -->
-    <section class="menu wrap" id="menu" aria-labelledby="menu-title">
-      <div class="menu__head">
-        <h2 id="menu-title" data-i18n="menu.title">Меню</h2>
-        <p class="menu__note" data-i18n="menu.note">Цены в сумах.</p>
+    <!-- Десерты: фото с витрины, цены уточняются на месте -->
+    <section class="desserts wrap" id="desserts" aria-labelledby="desserts-title">
+      <div class="section-head">
+        <h2 id="desserts-title" data-i18n="desserts.title">Десерты</h2>
+        <p class="section-lead" data-i18n="desserts.lead">Печём к кофе: печенье, рулеты, брауни и торты.</p>
       </div>
-      <div class="tabs" role="tablist" aria-labelledby="menu-title" id="menu-tabs"></div>
-      <div id="menu-panels"></div>
-      <noscript><p>Чтобы увидеть меню, включите JavaScript в браузере.</p></noscript>
+      <ul class="dishes dishes--five">
+        <li class="dish dish--small">
+          <img src="img/d-cookie.webp" width="720" height="900" alt="" loading="lazy">
+          <h3 data-i18n="ds1">Шоколадное печенье с карамелью и куртом</h3>
+        </li>
+        <li class="dish dish--small">
+          <img src="img/d-oat.webp" width="720" height="900" alt="" loading="lazy">
+          <h3 data-i18n="ds2">Овсяное печенье без пшеничной муки</h3>
+        </li>
+        <li class="dish dish--small">
+          <img src="img/d-roll.webp" width="720" height="900" alt="" loading="lazy">
+          <h3 data-i18n="ds3">Маковый рулет с апельсином</h3>
+        </li>
+        <li class="dish dish--small">
+          <img src="img/d-brownie.webp" width="720" height="900" alt="" loading="lazy">
+          <h3 data-i18n="ds4">Чиз-брауни с халвой и чёрным тмином</h3>
+        </li>
+        <li class="dish dish--small">
+          <img src="img/d-honey.webp" width="720" height="900" alt="" loading="lazy">
+          <h3 data-i18n="ds5">Медовый торт</h3>
+        </li>
+      </ul>
     </section>
 
-    <!-- Отзывы с Яндекс Карт -->
+    <!-- Меню: белый «лист», как печатное меню. Вкладки и позиции собирает script.js из i18n.js -->
+    <section class="menu" id="menu" aria-labelledby="menu-title">
+      <div class="wrap">
+        <div class="menu__head">
+          <h2 id="menu-title" data-i18n="menu.title">Меню</h2>
+          <p class="menu__note" data-i18n="menu.note">Цены в сумах.</p>
+        </div>
+        <div class="tabs" role="tablist" aria-labelledby="menu-title" id="menu-tabs"></div>
+        <div id="menu-panels"></div>
+        <noscript><p>Чтобы увидеть меню, включите JavaScript в браузере.</p></noscript>
+      </div>
+    </section>
+
+    <!-- Отзывы с Яндекс Карт: собирает script.js -->
     <section class="reviews wrap" aria-labelledby="reviews-title">
       <div class="reviews__head">
         <h2 id="reviews-title" data-i18n="reviews.title">Гости о нас</h2>
         <a class="link" href="https://yandex.uz/maps/org/tosh_coffee/100439749029/reviews/" target="_blank" rel="noopener"><span data-i18n="reviews.rating">4,7 на Яндекс Картах</span></a>
       </div>
-      <div class="reviews__list">
-        <figure class="review">
-          <blockquote><p data-i18n="r1.text">Это самый вкусный кофе в Ташкенте, который я пробовала. Идеальный!</p></blockquote>
-          <figcaption>Ольга Матяш <span class="review__note" data-i18n="reviews.translated"></span></figcaption>
-        </figure>
-        <figure class="review">
-          <blockquote><p data-i18n="r2.text">Самая вкусная V60 в Ташкенте.</p></blockquote>
-          <figcaption>Василина А. <span class="review__note" data-i18n="reviews.translated"></span></figcaption>
-        </figure>
-        <figure class="review">
-          <blockquote><p data-i18n="r3.text">Очень стильное место Ташкента.</p></blockquote>
-          <figcaption>Виталина Мельцова <span class="review__note" data-i18n="reviews.translated"></span></figcaption>
-        </figure>
-      </div>
+      <div class="reviews__list" id="reviews"></div>
     </section>
 
-    <!-- Адрес и часы -->
-    <section class="visit split split--reverse" id="visit" aria-labelledby="visit-title">
-      <div class="split__body">
+    <!-- Адрес, часы и карта -->
+    <section class="visit wrap" id="visit" aria-labelledby="visit-title">
+      <div class="visit__body">
         <h2 id="visit-title" data-i18n="visit.title">Как нас найти</h2>
-        <p class="visit__address" data-i18n="visit.address">Ташкент, Мирабадский район, улица Авлиё-Ата, 128</p>
+        <p class="visit__address" data-i18n="visit.address">Ташкент, Мирабадский район, улица Авлиё‑Ата, 128</p>
 
         <h3 data-i18n="visit.hours">Часы работы</h3>
         <dl class="hours">
@@ -175,9 +227,9 @@
           <a class="btn" href="https://www.instagram.com/tosh.coffee/" target="_blank" rel="noopener">Instagram</a>
         </div>
       </div>
-      <figure class="split__photo">
-        <img src="img/terrace.webp" width="720" height="1000" alt="Летняя терраса Tosh со столиками под деревьями" data-i18n-alt="visit.alt" loading="lazy">
-      </figure>
+      <div class="visit__map">
+        <iframe src="https://yandex.uz/map-widget/v1/?ll=69.281422%2C41.289152&amp;z=16&amp;pt=69.281422%2C41.289152%2Cpm2gnm&amp;l=map" title="Tosh на карте" data-i18n-title="visit.map" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
     </section>
   </main>
 

@@ -54,11 +54,15 @@
     document.querySelectorAll("[data-i18n-aria]").forEach((el) => {
       el.setAttribute("aria-label", tr(el.dataset.i18nAria));
     });
+    document.querySelectorAll("[data-i18n-title]").forEach((el) => {
+      el.setAttribute("title", tr(el.dataset.i18nTitle));
+    });
     document.querySelectorAll(".lang button").forEach((btn) => {
       btn.setAttribute("aria-pressed", String(btn.dataset.lang === lang));
     });
 
     renderMenu();
+    renderReviews();
     updateStatus();
   }
 
@@ -74,7 +78,7 @@
   const tabsEl = document.getElementById("menu-tabs");
   const panelsEl = document.getElementById("menu-panels");
 
-  const STRIP_SIDE = { rose: "left", ochre: "right" };
+  const PHOTOS = window.TOSH_PHOTOS || {};
 
   const formatPrice =(n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 
@@ -85,15 +89,37 @@
     return node;
   }
 
-  function renderItem([name, amount, price, desc]) {
+  // Строка меню: фото (или квадратик узора раздела, если фото нет), название, цена, пояснение
+  function renderItem([name, amount, price, desc], pattern) {
     const li = el("li", "item");
-    li.append(el("span", "item__name", name[lang]));
-    li.append(el("span", "item__price", formatPrice(price)));
+
+    const photo = PHOTOS[name.ru];
+    if (photo) {
+      const img = el("img", "item__photo");
+      img.src = `img/menu/${photo}.webp`;
+      img.width = 360;
+      img.height = 360;
+      img.loading = "lazy";
+      img.decoding = "async";
+      img.alt = "";
+      li.append(img);
+    } else {
+      const ph = el("span", `item__photo item__photo--empty band--${pattern}`);
+      ph.setAttribute("aria-hidden", "true");
+      li.append(ph);
+    }
+
+    const text = el("div", "item__text");
+    const head = el("div", "item__head");
+    head.append(el("span", "item__name", name[lang]));
+    if (price) head.append(el("span", "item__price", formatPrice(price)));
+    text.append(head);
 
     const parts = [];
     if (amount) parts.push(`${amount[0]} ${UNITS[amount[1]][lang]}`);
     if (desc && desc[lang]) parts.push(desc[lang]);
-    if (parts.length) li.append(el("span", "item__meta", parts.join(", ")));
+    if (parts.length) text.append(el("span", "item__meta", parts.join(", ")));
+    li.append(text);
     return li;
   }
 
@@ -104,7 +130,10 @@
     MENU.forEach((section) => {
       const selected = section.id === activeTab;
 
-      const tab = el("button", "tab", section.label[lang]);
+      const tab = el("button", "tab");
+      const swatch = el("span", `tab__swatch band--${section.pattern}`);
+      swatch.setAttribute("aria-hidden", "true");
+      tab.append(swatch, el("span", "", section.label[lang]));
       tab.type = "button";
       tab.id = `tab-${section.id}`;
       tab.setAttribute("role", "tab");
@@ -125,15 +154,6 @@
       band.setAttribute("aria-hidden", "true");
       panel.append(band);
 
-      // На широком экране узор идёт вертикальной лентой сбоку, как в печатном меню Tosh
-      const side = STRIP_SIDE[section.pattern];
-      if (side) {
-        panel.classList.add("panel--strip", `panel--strip-${side}`);
-        const strip = el("div", `strip strip--${section.pattern}`);
-        strip.setAttribute("aria-hidden", "true");
-        panel.append(strip);
-      }
-
       const groups = el("div", "groups");
       section.groups.forEach((group) => {
         const box = el("section", "group");
@@ -144,7 +164,7 @@
 
         const list = el("ul", "items");
         list.setAttribute("role", "list");
-        group.items.forEach((item) => list.append(renderItem(item)));
+        group.items.forEach((item) => list.append(renderItem(item, section.pattern)));
         box.append(list);
         groups.append(box);
       });
@@ -166,6 +186,11 @@
     });
   }
 
+  // Кнопка «Всё меню кухни» сразу открывает нужную вкладку
+  document.querySelectorAll("[data-open-tab]").forEach((link) => {
+    link.addEventListener("click", () => selectTab(link.dataset.openTab, false));
+  });
+
   // Стрелки влево/вправо, Home и End переключают вкладки
   tabsEl.addEventListener("keydown", (e) => {
     const ids = MENU.map((s) => s.id);
@@ -180,6 +205,24 @@
       selectTab(next, true);
     }
   });
+
+  /* ——— Отзывы ——— */
+
+  const reviewsEl = document.getElementById("reviews");
+
+  function renderReviews() {
+    reviewsEl.replaceChildren();
+    window.TOSH_REVIEWS.forEach(([name, text]) => {
+      const fig = el("figure", "review");
+      const quote = el("blockquote");
+      quote.append(el("p", "", text[lang]));
+      const cap = el("figcaption", "", name);
+      const note = tr("reviews.translated");
+      if (note) cap.append(el("span", "review__note", note));
+      fig.append(quote, cap);
+      reviewsEl.append(fig);
+    });
+  }
 
   /* ——— Открыто или закрыто ———
      Пн–Сб 8:00–21:00, Вс 10:00–21:00, кухня до 20:00. Время — ташкентское. */

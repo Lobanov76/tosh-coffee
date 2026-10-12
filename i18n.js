@@ -80,23 +80,48 @@ window.TOSH_TEXT = {
     "Vinyl on the turntable, plenty of light and plants, and tables with power outlets."
   ),
 
+  "atmos.title": t("Атмосфера", "Atmosfera", "Atmosphere"),
+  "atmos.lead": t(
+    "Дерево, металл, зелень и мебель в духе mid‑century. Барельефы с городскими сюжетами, винил и стальные подносы. Днём здесь работают и встречаются, вечером пьют кофе под пластинки.",
+    "Yogʻoch, metall, koʻkalamzor va mid‑century uslubidagi mebel. Shahar syujetli barelyeflar, vinil va poʻlat patnislar. Kunduzi bu yerda ishlashadi va uchrashishadi, kechqurun plastinkalar ostida qahva ichishadi.",
+    "Wood, metal, greenery and mid‑century furniture. Reliefs of city scenes, vinyl and steel trays. By day people work and meet here; in the evening, it is coffee and records."
+  ),
+  "atmos.relief": t("Барельефы в зале", "Zaldagi barelyeflar", "Reliefs in the hall"),
+  "atmos.bar": t("Бар и кресла mid‑century", "Bar va mid‑century kreslolar", "The bar and mid‑century armchairs"),
+  "atmos.hall": t("Светлый зал у окон", "Deraza yonidagi yorugʻ zal", "The bright hall by the windows"),
+  "atmos.lamps": t("Свет над баром", "Bar ustidagi chiroqlar", "Lights over the bar"),
+  "atmos.evening": t("Вечером", "Kechqurun", "In the evening"),
+  "atmos.terrace": t("Летняя терраса", "Yozgi ayvon", "Summer terrace"),
+
   "kitchen.title": t("Кухня", "Oshxona", "Kitchen"),
   "kitchen.lead": t(
-    "Завтраки, салаты и лёгкие блюда. Подаём на стальных подносах, как в старых ташкентских столовых.",
-    "Nonushtalar, salatlar va yengil taomlar. Eski Toshkent oshxonalaridagidek poʻlat patnislarda tortamiz.",
-    "Breakfasts, salads and light dishes, served on steel trays like in old Tashkent canteens."
+    "Завтраки весь день, салаты и лёгкие блюда. Фишка меню — завтрак TOSH: горячая лепёшка, каймак и джем. Всё дело в простоте.",
+    "Kun boʻyi nonushta, salatlar va yengil taomlar. Menyuning oʻziga xosligi — TOSH nonushtasi: issiq non, qaymoq va jem. Butun sir soddalikda.",
+    "Breakfast all day, salads and light dishes. The signature is the TOSH breakfast: hot flatbread, kaymak and jam. It is all about simplicity."
   ),
-  "sig.title": t("Завтрак TOSH", "TOSH nonushtasi", "TOSH breakfast"),
-  "sig.text": t(
-    "Традиционный узбекский завтрак: горячая лепёшка, каймак и джем. Вся фишка — в простоте.",
-    "Anʼanaviy oʻzbek nonushtasi: issiq non, qaymoq va jem. Butun sir — soddalikda.",
-    "A traditional Uzbek breakfast: hot flatbread, kaymak and jam. The whole point is simplicity."
+  "kitchen.all": t("Всё меню кухни", "Oshxona menyusi", "Full kitchen menu"),
+  "d1.name": t("Завтрак TOSH", "TOSH nonushtasi", "TOSH breakfast"),
+  "d1.text": t("Горячая лепёшка, каймак и джем. Фишка — в простоте", "Issiq non, qaymoq va jem. Butun sir — soddalikda", "Hot flatbread, kaymak and jam. Simplicity is the point"),
+  "d2.name": t("Шакшука TOSH", "TOSH shakshukasi", "TOSH shakshuka"),
+  "d2.text": t("Яйца в томатном соусе с куртом и чёрным тмином, к ней лепёшка", "Qurt va sedana bilan pomidor sousidagi tuxum, yonida non", "Eggs in tomato sauce with kurt and nigella seeds, with flatbread"),
+  "d3.name": t("Кофейный йогурт с чиа", "Chia bilan qahvali yogurt", "Coffee yogurt with chia"),
+  "d3.text": t("Жареный банан, гранола, орехи, мёд и корица", "Qovurilgan banan, granola, yongʻoq, asal va dolchin", "Fried banana, granola, nuts, honey and cinnamon"),
+  "d4.name": t("Карамельный тост с сыром", "Karamelli pishloqli tost", "Caramel toast with cheese"),
+  "d4.text": t("Бриошь, моцарелла и гауда, карамель из мёда, сметана", "Brioch, motsarella va gauda, asalli karamel, smetana", "Brioche, mozzarella and gouda, honey caramel, sour cream"),
+
+  "desserts.title": t("Десерты", "Desertlar", "Desserts"),
+  "desserts.lead": t(
+    "Печём к кофе: печенье, рулеты, брауни и торты. Ассортимент на витрине меняется — спросите у бариста, что есть сегодня.",
+    "Qahvaga pishiramiz: pechenye, rulet, brauni va tortlar. Vitrinadagi tanlov oʻzgarib turadi — bugun nima borligini baristadan soʻrang.",
+    "Baked to go with coffee: cookies, rolls, brownies and cakes. The counter changes, so ask the barista what is on today."
   ),
-  "photo.shakshuka": t("Шакшука TOSH", "TOSH shakshukasi", "TOSH Shakshuka"),
-  "photo.yogurt": t("Кофейный йогурт с чиа и жареным бананом", "Chia va qovurilgan banan bilan qahvali yogurt", "Coffee yogurt with chia and fried banana"),
-  "photo.toast": t("Карамельный тост с сыром", "Karamelli pishloqli tost", "Caramel toast with cheese"),
-  "photo.set": t("Бариста-сет: эспрессо, фильтр и флэт уайт", "Barista set: espresso, filtr va flat white", "Barista set: espresso, filter and flat white"),
-  "photo.vitrine": t("Витрина с десертами", "Desertlar vitrinasi", "The dessert counter"),
+  "desserts.note": t("цены — на витрине", "narxlar vitrinada", "prices at the counter"),
+  "ds1": t("Шоколадное печенье с карамелью и куртом", "Karamel va qurt bilan shokoladli pechenye", "Chocolate cookie with caramel and kurt"),
+  "ds2": t("Овсяное печенье без пшеничной муки", "Bugʻdoy unisiz suli pechenyesi", "Oat cookie without wheat flour"),
+  "ds3": t("Маковый рулет с апельсином", "Apelsinli makli rulet", "Poppy seed roll with orange"),
+  "ds4": t("Чиз-брауни с халвой и чёрным тмином", "Holva va qora sedana bilan chiz-brauni", "Cheese brownie with halva and nigella seeds"),
+  "ds5": t("Медовый торт", "Asalli tort", "Honey cake"),
+
 
   "menu.title": t("Меню", "Menyu", "Menu"),
   "menu.note": t("Цены в сумах.", "Narxlar soʻmda.", "Prices in Uzbek soʻm."),
@@ -105,22 +130,6 @@ window.TOSH_TEXT = {
   "reviews.rating": t("4,7 на Яндекс Картах", "Yandex Xaritalarda 4,7", "4.7 on Yandex Maps"),
   "reviews.all": t("Все отзывы", "Barcha sharhlar", "All reviews"),
   "reviews.translated": t("", "Rus tilidan tarjima", "Translated from Russian"),
-  "r1.text": t(
-    "Это самый вкусный кофе в Ташкенте, который я пробовала. Идеальный!",
-    "Toshkentda tatib koʻrganlarim ichida eng mazali qahva. Mukammal!",
-    "The best coffee I’ve had in Tashkent. Perfect!"
-  ),
-  "r2.text": t(
-    "Самая вкусная V60 в Ташкенте. Драники со страчателлой — очень вкусные!",
-    "Toshkentdagi eng mazali V60. Strachatellali qovoqli dranikilar juda mazali!",
-    "The best V60 in Tashkent. The zucchini pancakes with stracciatella are delicious!"
-  ),
-  "r3.text": t(
-    "Очень стильное место Ташкента. Кофе один из самых достойных. Красивый интерьер, пропитанный любовью к Ташкенту.",
-    "Toshkentning juda didli maskani. Qahvasi eng munosiblaridan. Toshkentga muhabbat bilan yoʻgʻrilgan chiroyli interyer.",
-    "One of the most stylish places in Tashkent, with some of its best coffee. A beautiful interior steeped in love for the city."
-  ),
-
   "visit.title": t("Как нас найти", "Bizni qayerdan topish mumkin", "Find us"),
   "visit.address": t(
     "Ташкент, Мирабадский район, улица Авлиё‑Ата, 128",
@@ -134,13 +143,88 @@ window.TOSH_TEXT = {
   "visit.phone": t("Телефон", "Telefon", "Phone"),
   "visit.yandex": t("Яндекс Карты", "Yandex Xaritalar", "Yandex Maps"),
   "visit.call": t("Позвонить", "Qoʻngʻiroq qilish", "Call"),
-  "visit.alt": t(
-    "Летняя терраса Tosh со столиками под деревьями",
-    "Tosh yozgi ayvoni, daraxtlar ostidagi stollar",
-    "The Tosh summer terrace with tables under the trees"
-  ),
+  "visit.map": t("Tosh на карте", "Tosh xaritada", "Tosh on the map"),
 
   "footer.city": t("Ташкент", "Toshkent", "Tashkent"),
+};
+
+/* Отзывы гостей с Яндекс Карт (оригиналы на русском, немного сокращены) */
+window.TOSH_REVIEWS = [
+  ["Ольга Матяш", t(
+    "С чего точно стоит начать — кофе. Это самый вкусный кофе в Ташкенте, который я пробовала. Идеальный! Брала карамелизированные тосты с сыром — очень вкусно и сытно.",
+    "Albatta qahvadan boshlash kerak. Toshkentda tatib koʻrganlarim ichida eng mazali qahva. Mukammal! Pishloqli karamel tost oldim — juda mazali va toʻyimli.",
+    "Start with the coffee. It is the best coffee I’ve had in Tashkent. Perfect! I had the caramel toast with cheese, delicious and filling."
+  )],
+  ["Анна Загуменникова", t(
+    "Очень уютное место с красивым интерьером — всё продумано до мелочей, атмосфера располагает, и хочется остаться подольше. Еда вкусная, всё свежее и красиво подано.",
+    "Chiroyli interyerli juda shinam joy — hamma narsa mayda detallargacha oʻylangan, uzoqroq qolging keladi. Taomlar mazali, hammasi yangi va chiroyli tortilgan.",
+    "A very cosy place with a beautiful interior, thought through to the details. You want to stay longer. The food is tasty, fresh and beautifully served."
+  )],
+  ["Артём Г.", t(
+    "Отличное место, где можно попробовать кофе, приготовленный альтернативными способами на разном зерне. Крутой дизайн и живой винил.",
+    "Turli donlarda muqobil usullar bilan tayyorlangan qahvani tatib koʻrish mumkin boʻlgan ajoyib joy. Zoʻr dizayn va jonli vinil.",
+    "A great place to try coffee brewed by alternative methods on different beans. Great design and live vinyl."
+  )],
+  ["Василина А.", t(
+    "Самая вкусная V60 в Ташкенте. Драники со страчателлой — очень вкусные! Атмосфера — восторг!",
+    "Toshkentdagi eng mazali V60. Strachatellali dranikilar juda mazali! Atmosfera — ajoyib!",
+    "The best V60 in Tashkent. The pancakes with stracciatella are delicious! The atmosphere is a delight!"
+  )],
+  ["Зоя Коваленко", t(
+    "Место уютное, всё выглядит аккуратно и со вкусом. Еда вкусная, чувствуется, что готовят с вниманием. Пробовала матча-латте — очень понравился.",
+    "Joy shinam, hamma narsa did bilan qilingan. Taomlar mazali, e’tibor bilan tayyorlanishi sezilib turadi. Matcha-latte ichib koʻrdim — juda yoqdi.",
+    "Cosy, neat and tasteful. The food is good and you can tell it is made with care. I tried the matcha latte and loved it."
+  )],
+  ["Ангелина", t(
+    "Вкусный капучино, нереальная творожно-маковая запеканка. Можно собрать хороший завтрак, ну и лепёшки с каймаком и джемом — в самое ♥",
+    "Mazali kapuchino, aql bovar qilmas makli zapekanka. Yaxshi nonushta yigʻish mumkin, qaymoq va jemli non esa — yurakka ♥",
+    "Tasty cappuccino and an unreal poppy seed cottage cheese bake. You can put together a great breakfast, and the flatbread with kaymak and jam goes straight to the ♥"
+  )],
+  ["Eva T.", t(
+    "Исключительно высокое качество кофе, интересный сорт зерна. Еда очень вкусная, продукты свежие. Порекомендовала бы друзьям и вернулась бы сама.",
+    "Qahva sifati juda yuqori, qiziqarli don navi. Taomlar juda mazali, mahsulotlar yangi. Doʻstlarimga tavsiya qilardim va oʻzim ham qaytardim.",
+    "Exceptional coffee quality and an interesting bean. The food is very good and fresh. I would recommend it to friends and come back myself."
+  )],
+  ["Виталина Мельцова", t(
+    "Очень стильное место Ташкента. Кофе один из самых достойных. Красивый интерьер, пропитанный любовью к Ташкенту.",
+    "Toshkentning juda didli maskani. Qahvasi eng munosiblaridan. Toshkentga muhabbat bilan yoʻgʻrilgan chiroyli interyer.",
+    "One of the most stylish places in Tashkent, with some of its best coffee. A beautiful interior steeped in love for the city."
+  )],
+  ["Александр Дорогов", t(
+    "Стильно, современно. Ташкент, каким он должен быть.",
+    "Didli, zamonaviy. Toshkent qanday boʻlishi kerak boʻlsa, xuddi shunday.",
+    "Stylish and modern. Tashkent as it should be."
+  )],
+  ["Neda Golshan", t(
+    "Очень приятная атмосфера: можно часами сидеть и наслаждаться работой и встречами.",
+    "Juda yoqimli atmosfera: soatlab oʻtirib, ish va uchrashuvlardan zavqlanish mumkin.",
+    "A really pleasant atmosphere. You can sit for hours, working or meeting people."
+  )],
+];
+
+/* Фото позиций меню (из сторис Tosh): русское название → файл в img/menu/ */
+window.TOSH_PHOTOS = {
+  "Эспрессо": "espresso", "Эспрессо макиато": "macchiato", "Американо": "americano", "V60": "v60",
+  "Бариста-сет": "barista-set", "Флэт уайт": "flat-white", "Капучино": "cappuccino", "Латте": "latte",
+  "Раф ванильный": "raf", "Колд-брю арбуз": "cb-tarvuz", "Колд-брю шарбат": "cb-sharbat",
+  "Эспрессо-тоник": "espresso-tonic", "Айс латте": "iced-latte", "Оранжино": "orangino", "Протеиновый кофе": "protein",
+  "Матча-латте, горячий": "matcha-hot", "Матча-латте, холодный": "matcha-iced", "Ходзича-латте, горячий": "hojicha-hot",
+  "Ходзича-латте, холодный": "hojicha-iced", "Матча-тоник": "matcha-tonic", "Матча «Банановое облако»": "banana-matcha",
+  "Урик шарбати": "orik", "Лимонад «Фейхоа»": "feijoa", "Райхон шарбати": "rayhon", "Зелёный детокс": "detox",
+  "Завтрак TOSH": "tosh-breakfast",
+  "Сыр гауда": "gouda", "Мортаделла": "mortadella", "Куриная грудка": "chicken", "Филе тунца жареное": "tuna",
+  "Креветки": "shrimp", "Лосось слабосолёный": "salmon", "Яйцо": "egg", "Авокадо": "avocado", "Салатный микс": "salad-mix", "Батат фри": "batat",
+  "Шакшука TOSH": "shakshuka", "Яйца TOSH с йогуртом и солёной гранолой": "tosh-eggs",
+  "Блинчики с курицей и грибами": "chicken-crepes", "Гречневая каша с яйцом и соусом песто": "buckwheat",
+  "Овсяная каша с шоколадом и бананом": "oatmeal", "Кофейный йогурт с чиа и жареным бананом": "yogurt",
+  "Карамельный тост с сыром": "toast", "Творожная запеканка с маком": "zapekanka",
+  "Сырники из рикотты с черничным кремом": "syrniki", "Блинчики с яблоком и корицей": "apple-crepes",
+  "Зелёный салат": "green-salad", "Протеиновый боул с курицей": "bowl-chicken", "Протеиновый боул с филе тунца": "bowl-tuna",
+  "С тунцом": "sandwich-tuna", "С курицей": "sandwich-chicken",
+  "С мортаделлой": "fb-mortadella", "С лососем": "fb-salmon", "Со страчателлой и трюфельной пастой": "fb-stracciatella",
+  "С домашней баклажанной икрой": "fb-eggplant", "С паштетом из куриной печени": "fb-pate", "С авокадо и солёной гранолой": "fb-avocado",
+  "Шоколадное печенье с карамелью и куртом": "cookie-kurt", "Овсяное печенье без пшеничной муки": "cookie-oat",
+  "Маковый рулет с апельсином": "poppy-roll", "Чиз-брауни с халвой и чёрным тмином": "brownie", "Медовый торт": "honey-cake",
 };
 
 /* Единицы объёма и веса */
@@ -331,6 +415,24 @@ window.TOSH_MENU = [
           [t("С домашней баклажанной икрой", "Baqlajon ikrasi bilan", "With homemade aubergine spread"), null, 45000],
           [t("С паштетом из куриной печени", "Tovuq jigaridan pashtet bilan", "With chicken liver pâté"), null, 50000],
           [t("С авокадо и солёной гранолой", "Avokado va shoʻr granola bilan", "With avocado and savoury granola"), null, 80000],
+        ],
+      },
+    ],
+  },
+  {
+    id: "desserts",
+    pattern: "rose",
+    label: t("Десерты", "Desertlar", "Desserts"),
+    groups: [
+      {
+        title: t("Десерты", "Desertlar", "Desserts"),
+        note: t("цены — на витрине", "narxlar vitrinada", "prices at the counter"),
+        items: [
+          [t("Шоколадное печенье с карамелью и куртом", "Karamel va qurt bilan shokoladli pechenye", "Chocolate cookie with caramel and kurt"), null, null],
+          [t("Овсяное печенье без пшеничной муки", "Bugʻdoy unisiz suli pechenyesi", "Oat cookie without wheat flour"), null, null],
+          [t("Маковый рулет с апельсином", "Apelsinli makli rulet", "Poppy seed roll with orange"), null, null],
+          [t("Чиз-брауни с халвой и чёрным тмином", "Holva va qora sedana bilan chiz-brauni", "Cheese brownie with halva and nigella seeds"), null, null],
+          [t("Медовый торт", "Asalli tort", "Honey cake"), null, null],
         ],
       },
     ],
