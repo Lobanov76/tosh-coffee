@@ -30,9 +30,9 @@
 
   <link rel="preload" href="fonts/commissioner-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="fonts/fonts.css">
-  <link rel="stylesheet" href="styles.css?v=1">
-  <script src="i18n.js?v=1" defer></script>
-  <script src="script.js?v=1" defer></script>
+  <link rel="stylesheet" href="styles.css?v=3">
+  <script src="i18n.js?v=3" defer></script>
+  <script src="script.js?v=3" defer></script>
 </head>
 <body>
   <a class="skip" href="#menu" data-i18n="hero.menu">Смотреть меню</a>
@@ -79,30 +79,39 @@
       </figure>
     </section>
 
-    <!-- О кофейне -->
-    <section class="about wrap" id="about" aria-labelledby="about-title">
-      <figure class="about__photo">
+    <!-- О кофейне: фото до левого края экрана -->
+    <section class="about split" id="about" aria-labelledby="about-title">
+      <figure class="split__photo">
         <img src="img/bar.webp" width="720" height="1280" alt="Барная стойка Tosh с абажурами и вывеской" data-i18n-alt="about.alt" loading="lazy">
       </figure>
-      <div class="about__body">
+      <div class="split__body">
         <h2 id="about-title" data-i18n="about.title">Ташкент, который мы любим</h2>
-        <p class="about__text" data-i18n="about.text">«Тош» по-узбекски — камень, а Тошкент — каменный город.</p>
+        <p class="about__text" data-i18n="about.text">Tosh — кофейня про кофе, город и детали.</p>
+        <p class="about__name" data-i18n="about.name">«Тош» по-узбекски — камень, а Тошкент — каменный город.</p>
         <dl class="facts">
           <div><dt data-i18n="f1.title">Своя обжарка</dt><dd data-i18n="f1.text"></dd></div>
           <div><dt data-i18n="f2.title">Завтраки весь день</dt><dd data-i18n="f2.text"></dd></div>
-          <div><dt data-i18n="f3.title">Десерты к кофе</dt><dd data-i18n="f3.text"></dd></div>
-          <div><dt data-i18n="f4.title">Можно поработать</dt><dd data-i18n="f4.text"></dd></div>
+          <div><dt data-i18n="f3.title">Авторские напитки</dt><dd data-i18n="f3.text"></dd></div>
+          <div><dt data-i18n="f4.title">Винил и зелень</dt><dd data-i18n="f4.text"></dd></div>
         </dl>
       </div>
     </section>
 
-    <!-- Кухня: фото блюд, листаются пальцем -->
+    <!-- Кухня: текст и фирменный завтрак слева, фото блюд до правого края.
+         На телефоне фото листаются пальцем -->
     <section class="kitchen" aria-labelledby="kitchen-title">
-      <div class="wrap">
+      <div class="kitchen__intro">
         <h2 id="kitchen-title" data-i18n="kitchen.title">Кухня</h2>
-        <p class="section-lead" data-i18n="kitchen.lead">Подаём на стальных подносах, как в старых ташкентских чайханах и столовых.</p>
+        <p class="section-lead" data-i18n="kitchen.lead">Завтраки, салаты и лёгкие блюда.</p>
+        <div class="signature">
+          <div class="signature__head">
+            <h3 data-i18n="sig.title">Завтрак TOSH</h3>
+            <span class="signature__price">35&nbsp;000</span>
+          </div>
+          <p data-i18n="sig.text">Традиционный узбекский завтрак: горячая лепёшка, каймак и джем.</p>
+        </div>
       </div>
-      <ul class="dishes wrap">
+      <ul class="dishes">
         <li><figure><img src="img/shakshuka.webp" width="720" height="900" alt="" loading="lazy"><figcaption data-i18n="photo.shakshuka">Шакшука TOSH</figcaption></figure></li>
         <li><figure><img src="img/yogurt.webp" width="720" height="900" alt="" loading="lazy"><figcaption data-i18n="photo.yogurt">Кофейный йогурт с чиа и жареным бананом</figcaption></figure></li>
         <li><figure><img src="img/toast.webp" width="590" height="740" alt="" loading="lazy"><figcaption data-i18n="photo.toast">Карамельный тост с сыром</figcaption></figure></li>
@@ -145,8 +154,8 @@
     </section>
 
     <!-- Адрес и часы -->
-    <section class="visit wrap" id="visit" aria-labelledby="visit-title">
-      <div class="visit__body">
+    <section class="visit split split--reverse" id="visit" aria-labelledby="visit-title">
+      <div class="split__body">
         <h2 id="visit-title" data-i18n="visit.title">Как нас найти</h2>
         <p class="visit__address" data-i18n="visit.address">Ташкент, Мирабадский район, улица Авлиё-Ата, 128</p>
 
@@ -166,7 +175,7 @@
           <a class="btn" href="https://www.instagram.com/tosh.coffee/" target="_blank" rel="noopener">Instagram</a>
         </div>
       </div>
-      <figure class="visit__photo">
+      <figure class="split__photo">
         <img src="img/terrace.webp" width="720" height="1000" alt="Летняя терраса Tosh со столиками под деревьями" data-i18n-alt="visit.alt" loading="lazy">
       </figure>
     </section>

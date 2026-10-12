@@ -74,7 +74,9 @@
   const tabsEl = document.getElementById("menu-tabs");
   const panelsEl = document.getElementById("menu-panels");
 
-  const formatPrice = (n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  const STRIP_SIDE = { rose: "left", ochre: "right" };
+
+  const formatPrice =(n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 
   function el(tag, className, text) {
     const node = document.createElement(tag);
@@ -122,6 +124,15 @@
       const band = el("div", `band band--${section.pattern}`);
       band.setAttribute("aria-hidden", "true");
       panel.append(band);
+
+      // На широком экране узор идёт вертикальной лентой сбоку, как в печатном меню Tosh
+      const side = STRIP_SIDE[section.pattern];
+      if (side) {
+        panel.classList.add("panel--strip", `panel--strip-${side}`);
+        const strip = el("div", `strip strip--${section.pattern}`);
+        strip.setAttribute("aria-hidden", "true");
+        panel.append(strip);
+      }
 
       const groups = el("div", "groups");
       section.groups.forEach((group) => {

@@ -12,7 +12,7 @@ window.TOSH_TEXT = {
     "Tosh — specialty coffee in Tashkent"
   ),
   "meta.description": t(
-    "Tosh qahvaxona на Авлиё-Ата, 128: спешелти-кофе из зерна своей обжарки, десерты и завтраки весь день. Меню на русском, узбекском и английском.",
+    "Tosh qahvaxona на Авлиё-Ата, 128 — кофейня про кофе, город и детали: спешелти-кофе из зерна своей обжарки, десерты и завтраки весь день. Меню на русском, узбекском и английском.",
     "Tosh qahvaxona, Avliyo Ota koʻchasi, 128: oʻzimiz qovurgan donlardan specialty qahva, desertlar va kun boʻyi nonushta.",
     "Tosh qahvaxona at 128 Avliyo Ota St: specialty coffee roasted in-house, desserts and all-day breakfast in Tashkent."
   ),
@@ -41,9 +41,14 @@ window.TOSH_TEXT = {
 
   "about.title": t("Ташкент, который мы любим", "Biz sevgan Toshkent", "The Tashkent we love"),
   "about.text": t(
-    "«Тош» по-узбекски — камень, а Тошкент — каменный город. Наша кофейня о нём: гипсовые барельефы во всю стену, как на фасадах старых ташкентских домов, стальные подносы, бетон и светлое дерево. И кофе, ради которого хочется задержаться.",
-    "«Tosh» — Toshkentning oʻzi. Devor boʻylab gips barelyeflar, xuddi eski Toshkent binolarining peshtoqidagidek, poʻlat patnislar, beton va och rang yogʻoch. Va uzoqroq qolgingiz keladigan qahva.",
-    "In Uzbek, tosh means stone, and Toshkent is the city of stone. Our café is about that city: plaster reliefs across the whole wall, like the façades of old Tashkent buildings, steel trays, concrete and pale wood. And coffee worth staying for."
+    "Tosh — кофейня про кофе, город и детали. Пространство вдохновлено ташкентским модернизмом: дерево, металл, зелень, мебель в духе mid‑century, городские барельефы и виниловые пластинки.",
+    "Tosh — qahva, shahar va mayda detallar haqidagi qahvaxona. Makon Toshkent modernizmidan ilhomlangan: yogʻoch, metall, koʻkalamzor, mid‑century uslubidagi mebel, shahar barelyeflari va vinil plastinkalar.",
+    "Tosh is a café about coffee, the city and the details. The space draws on Tashkent modernism: wood, metal, greenery, mid‑century furniture, city reliefs and vinyl records."
+  ),
+  "about.name": t(
+    "«Тош» по-узбекски — камень, а Тошкент — каменный город.",
+    "«Tosh» — tosh, Toshkent esa — tosh shahar.",
+    "In Uzbek, tosh means stone, and Toshkent is the city of stone."
   ),
   "about.alt": t(
     "Барная стойка Tosh с абажурами и вывеской",
@@ -52,34 +57,40 @@ window.TOSH_TEXT = {
   ),
   "f1.title": t("Своя обжарка", "Oʻzimiz qovuramiz", "Roasted in-house"),
   "f1.text": t(
-    "Зерно обжариваем сами. Эспрессо, V60, батч-брю и фильтр-шот — на разном зерне.",
-    "Donni oʻzimiz qovuramiz. Espresso, V60, batch brew va filtr-shot — turli donlarda.",
-    "We roast our own beans. Espresso, V60, batch brew and filter shots on different coffees."
+    "В основе — зерно собственной обжарки и современное оборудование. Эспрессо, V60, батч-брю и фильтр-шот.",
+    "Asosida — oʻzimiz qovurgan don va zamonaviy uskunalar. Espresso, V60, batch brew va filtr-shot.",
+    "Built on beans we roast ourselves and modern equipment. Espresso, V60, batch brew and filter shots."
   ),
   "f2.title": t("Завтраки весь день", "Kun boʻyi nonushta", "All-day breakfast"),
   "f2.text": t(
-    "Шакшука, сырники, каши и лепёшка с каймаком — пока работает кухня.",
-    "Shakshuka, sirniklar, boʻtqalar va qaymoqli non — oshxona ishlaguncha.",
-    "Shakshuka, ricotta pancakes, porridge and flatbread with kaymak while the kitchen is open."
+    "Завтраки, салаты и лёгкие блюда — пока работает кухня, до 20:00.",
+    "Nonushtalar, salatlar va yengil taomlar — oshxona ishlaguncha, 20:00 gacha.",
+    "Breakfasts, salads and light dishes while the kitchen is open, until 20:00."
   ),
-  "f3.title": t("Десерты к кофе", "Qahvaga desertlar", "Desserts"),
+  "f3.title": t("Авторские напитки", "Mualliflik ichimliklari", "Signature drinks"),
   "f3.text": t(
-    "Витрина с выпечкой и десертами. Гости особенно хвалят печенье с куртом.",
-    "Pishiriq va desertlar vitrinasi. Mehmonlar ayniqsa qurtli pechenyeni maqtashadi.",
-    "A counter of pastries and desserts. Guests especially love the kurt cookie."
+    "Урик шарбати, лимонад из фейхоа, колд-брю с арбузом и матча «Банановое облако».",
+    "Oʻrik sharbati, feyxoa limonadi, tarvuzli cold brew va «Bananli matcha buluti».",
+    "Dried apricot sharbat, feijoa lemonade, watermelon cold brew and a banana matcha cloud."
   ),
-  "f4.title": t("Можно поработать", "Ishlash mumkin", "Room to work"),
+  "f4.title": t("Винил и зелень", "Vinil va koʻkalamzor", "Vinyl and greenery"),
   "f4.text": t(
-    "Просторный светлый зал и столы с розетками.",
-    "Keng yorugʻ zal va rozetkali stollar.",
-    "A bright, spacious hall and tables with power outlets."
+    "Играют виниловые пластинки, в зале много света и растений, есть столы с розетками.",
+    "Vinil plastinkalar yangraydi, zalda yorugʻlik va oʻsimliklar koʻp, rozetkali stollar bor.",
+    "Vinyl on the turntable, plenty of light and plants, and tables with power outlets."
   ),
 
   "kitchen.title": t("Кухня", "Oshxona", "Kitchen"),
   "kitchen.lead": t(
-    "Подаём на стальных подносах, как в старых ташкентских чайханах и столовых.",
-    "Eski Toshkent choyxonalari va oshxonalaridagidek poʻlat patnislarda tortamiz.",
-    "Served on steel trays, the way old Tashkent teahouses and canteens did it."
+    "Завтраки, салаты и лёгкие блюда. Подаём на стальных подносах, как в старых ташкентских столовых.",
+    "Nonushtalar, salatlar va yengil taomlar. Eski Toshkent oshxonalaridagidek poʻlat patnislarda tortamiz.",
+    "Breakfasts, salads and light dishes, served on steel trays like in old Tashkent canteens."
+  ),
+  "sig.title": t("Завтрак TOSH", "TOSH nonushtasi", "TOSH breakfast"),
+  "sig.text": t(
+    "Традиционный узбекский завтрак: горячая лепёшка, каймак и джем. Вся фишка — в простоте.",
+    "Anʼanaviy oʻzbek nonushtasi: issiq non, qaymoq va jem. Butun sir — soddalikda.",
+    "A traditional Uzbek breakfast: hot flatbread, kaymak and jam. The whole point is simplicity."
   ),
   "photo.shakshuka": t("Шакшука TOSH", "TOSH shakshukasi", "TOSH Shakshuka"),
   "photo.yogurt": t("Кофейный йогурт с чиа и жареным бананом", "Chia va qovurilgan banan bilan qahvali yogurt", "Coffee yogurt with chia and fried banana"),
