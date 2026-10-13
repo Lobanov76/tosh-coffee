@@ -532,6 +532,12 @@ body { padding-bottom: 58px; }
 }
 
 .panel { margin-top: 1.5rem; }
+/* Заголовок раздела — только в версии без JavaScript, где все разделы идут подряд */
+.panel__title {
+  margin-top: 2.5rem;
+  font-size: 1.75rem;
+  font-weight: 300;
+}
 .panel[hidden] { display: none; }
 
 /* Лента узора из печатного меню Tosh — у каждой вкладки своя */

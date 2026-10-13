@@ -32,10 +32,10 @@
   <link rel="preload" as="image" href="img/hero-wide.webp" media="(min-width: 768px)" fetchpriority="high">
   <link rel="preload" href="fonts/commissioner-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="fonts/fonts.css">
-  <link rel="stylesheet" href="styles.css?v=17">
-  <script src="i18n.js?v=17" defer></script>
+  <link rel="stylesheet" href="styles.css?v=18">
+  <script src="i18n.js?v=18" defer></script>
   <script src="menu.js?v=2" defer></script>
-  <script src="script.js?v=17" defer></script>
+  <script src="script.js?v=18" defer></script>
 </head>
 <body>
   <a class="skip" href="#menu" data-i18n="hero.menu">Смотреть меню</a>
@@ -203,8 +203,203 @@
           </div>
         </div>
         <div class="tabs" role="tablist" aria-labelledby="menu-title" id="menu-tabs"></div>
-        <div id="menu-panels"></div>
-        <noscript><p>Чтобы увидеть меню, включите JavaScript в браузере.</p></noscript>
+        <!-- Меню на русском записано прямо в страницу (tools/prerender.js) — его видят поисковики и браузеры без JS.
+             script.js заменяет его на вкладки на выбранном языке -->
+        <div id="menu-panels">
+        <!-- MENU:START -->
+          <div class="panel" id="panel-coffee">
+            <h3 class="panel__title">Кофе</h3>
+            <div class="groups">
+              <section class="group">
+                <div class="group__head"><h3>Эспрессо и кофе с молоком</h3></div>
+                <ul class="items">
+                  <li class="item"><img class="item__photo" src="img/menu/espresso.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Эспрессо</span><span class="item__price">35&nbsp;000</span></div><span class="item__meta">40&nbsp;мл</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/americano.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Американо</span><span class="item__price">35&nbsp;000</span></div><span class="item__meta">200&nbsp;мл</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/macchiato.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Эспрессо макиато</span><span class="item__price">45&nbsp;000</span></div><span class="item__meta">50&nbsp;мл</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/flat-white.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Флэт уайт</span><span class="item__price">50&nbsp;000</span></div><span class="item__meta">180&nbsp;мл</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/cappuccino.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Капучино</span><span class="item__price">50&nbsp;000</span></div><span class="item__meta">250&nbsp;мл</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/latte.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Латте</span><span class="item__price">50&nbsp;000</span></div><span class="item__meta">250&nbsp;мл</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/raf.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Раф ванильный</span><span class="item__price">55&nbsp;000</span></div><span class="item__meta">250&nbsp;мл, эспрессо, сливки, ванильный сироп</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/truffle-cappuccino.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Трюфельный капучино <span class="item__new">Новинка</span></span><span class="item__price">60&nbsp;000</span></div><span class="item__meta">250&nbsp;мл, эспрессо, трюфельное молоко</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/miso-latte.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Латте мисо-карамель <span class="item__new">Новинка</span></span><span class="item__price">55&nbsp;000</span></div><span class="item__meta">250&nbsp;мл, эспрессо, молоко, солёная карамель, мисо</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/raf-date.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Раф финиковый <span class="item__new">Новинка</span></span><span class="item__price">55&nbsp;000</span></div><span class="item__meta">250&nbsp;мл, эспрессо, сливки, пюре из фиников</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/orangino.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Оранжино</span><span class="item__price">60&nbsp;000</span></div><span class="item__meta">250&nbsp;мл, эспрессо, апельсиновый сироп, сливочная пена с корицей</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/protein.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Протеиновый кофе</span><span class="item__price">60&nbsp;000</span></div><span class="item__meta">350&nbsp;мл, эспрессо, сывороточный протеин, молоко</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/espresso-tonic.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Эспрессо-тоник</span><span class="item__price">50&nbsp;000</span></div><span class="item__meta">350&nbsp;мл</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/iced-latte.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Айс латте</span><span class="item__price">50&nbsp;000</span></div><span class="item__meta">350&nbsp;мл</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/cocoa.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Какао</span><span class="item__price">45&nbsp;000</span></div><span class="item__meta">250&nbsp;мл</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/mint-cocoa.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Мятный какао <span class="item__new">Новинка</span></span><span class="item__price">45&nbsp;000</span></div><span class="item__meta">250&nbsp;мл, какао, молоко, мята</span></div></li>
+                </ul>
+              </section>
+              <section class="group">
+                <div class="group__head"><h3>Фильтр-кофе</h3><span class="group__note">зерно на выбор</span></div>
+                <ul class="items">
+                  <li class="item"><img class="item__photo" src="img/menu/batch.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Батч-брю</span><span class="item__price">35&nbsp;000</span></div><span class="item__meta">200&nbsp;мл, фильтр-кофе большой заварки: чистый, мягкий вкус</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/filter-shot.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Фильтр-шот</span><span class="item__price">60&nbsp;000</span></div><span class="item__meta">50&nbsp;мл</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/v60.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">V60</span><span class="item__price">60&nbsp;000</span></div><span class="item__meta">250&nbsp;мл</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/aeropress.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Аэропресс</span><span class="item__price">60&nbsp;000</span></div><span class="item__meta">180&nbsp;мл</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/barista-set.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Бариста-сет</span><span class="item__price">80&nbsp;000</span></div><span class="item__meta">370&nbsp;мл, эспрессо, флэт уайт и батч-брю: три способа раскрыть одно зерно</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/cb-tarvuz.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Колд-брю арбуз</span><span class="item__price">45&nbsp;000</span></div><span class="item__meta">230&nbsp;мл, с арбузным сиропом</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/cb-sharbat.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Колд-брю шарбат</span><span class="item__price">45&nbsp;000</span></div><span class="item__meta">230&nbsp;мл, с шарбатом из сухофруктов</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/cold-batch.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Колд батч вишня-бергамот <span class="item__new">Новинка</span></span><span class="item__price">45&nbsp;000</span></div><span class="item__meta">230&nbsp;мл, охлаждённый батч-брю с вишнёвым соком и бергамотом</span></div></li>
+                </ul>
+              </section>
+            </div>
+          </div>
+          <div class="panel" id="panel-drinks">
+            <h3 class="panel__title">Матча и чай</h3>
+            <div class="groups">
+              <section class="group">
+                <div class="group__head"><h3>Матча и ходзича</h3></div>
+                <ul class="items">
+                  <li class="item"><img class="item__photo" src="img/menu/matcha-hot.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Матча-латте, горячий</span><span class="item__price">50&nbsp;000</span></div><span class="item__meta">180&nbsp;мл, церемониальная матча, молоко на выбор</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/matcha-iced.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Матча-латте, холодный</span><span class="item__price">50&nbsp;000</span></div><span class="item__meta">350&nbsp;мл</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/hojicha-hot.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Ходзича-латте</span><span class="item__price">50&nbsp;000</span></div><span class="item__meta">180&nbsp;мл</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/hojicha-iced.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Ходзича-латте, холодный</span><span class="item__price">50&nbsp;000</span></div><span class="item__meta">350&nbsp;мл</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/hojicha-peanut.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Ходзича-латте с арахисом <span class="item__new">Новинка</span></span><span class="item__price">60&nbsp;000</span></div><span class="item__meta">250&nbsp;мл, арахисовая паста, белый шоколад</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/pumpkin-matcha.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Матча-латте тыквенный <span class="item__new">Новинка</span></span><span class="item__price">55&nbsp;000</span></div><span class="item__meta">250&nbsp;мл, матча, молоко, мёд, пюре из тыквы</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/pear-raf.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Матча-раф с грушей <span class="item__new">Новинка</span></span><span class="item__price">55&nbsp;000</span></div><span class="item__meta">250&nbsp;мл, ходзича, грушевое пюре, сливки, грушевые чипсы</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/mango-matcha.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Айс матча с пюре манго <span class="item__new">Новинка</span></span><span class="item__price">60&nbsp;000</span></div><span class="item__meta">350&nbsp;мл, матча, пюре манго, сливочная пена</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/matcha-tonic.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Матча-тоник</span><span class="item__price">55&nbsp;000</span></div><span class="item__meta">350&nbsp;мл, матча, тоник, лайм</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/banana-matcha.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Матча «Банановое облако»</span><span class="item__price">60&nbsp;000</span></div><span class="item__meta">350&nbsp;мл, банановый кордиал, кокосовая вода, пена из матчи</span></div></li>
+                </ul>
+              </section>
+              <section class="group">
+                <div class="group__head"><h3>Чай</h3><span class="group__note">чайник 500 мл</span></div>
+                <ul class="items">
+                  <li class="item"><img class="item__photo" src="img/menu/tea-mountain.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Горный чай</span><span class="item__price">40&nbsp;000</span></div></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/tea-gunpowder.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Ганпаудер</span><span class="item__price">40&nbsp;000</span></div></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/tea-earlgrey.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Эрл Грей</span><span class="item__price">40&nbsp;000</span></div></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/tea-dahongpao.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Да Хун Пао</span><span class="item__price">50&nbsp;000</span></div></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/shir.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Шир чай</span><span class="item__price">50&nbsp;000</span></div><span class="item__meta">молочный чай со сливочным вкусом и лёгкой солоноватостью</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/tea-cherry.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Чай вишня-миндаль <span class="item__new">Новинка</span></span><span class="item__price">50&nbsp;000</span></div><span class="item__meta">эрл грей, вишня, миндаль</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/tea-pear.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Чай груша-грейпфрут-бадьян <span class="item__new">Новинка</span></span><span class="item__price">50&nbsp;000</span></div><span class="item__meta">османтус, грейпфрут, бадьян</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/tea-jasmine.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Чай жасмин-клюква-арбуз <span class="item__new">Новинка</span></span><span class="item__price">50&nbsp;000</span></div><span class="item__meta">жасминовый чай, смородина, арбуз</span></div></li>
+                </ul>
+              </section>
+              <section class="group">
+                <div class="group__head"><h3>Авторские напитки и вода</h3></div>
+                <ul class="items">
+                  <li class="item"><img class="item__photo" src="img/menu/orik.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Урик шарбати</span><span class="item__price">40&nbsp;000</span></div><span class="item__meta">230&nbsp;мл, курага, яблоко, персик, специи, мёд</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/feijoa.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Лимонад «Фейхоа»</span><span class="item__price">40&nbsp;000</span></div><span class="item__meta">230&nbsp;мл, фейхоа, ананас, банан</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/rayhon.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Райхон шарбати</span><span class="item__price">40&nbsp;000</span></div><span class="item__meta">230&nbsp;мл, райхон, ежевика, алоэ</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/detox.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Зелёный детокс</span><span class="item__price">45&nbsp;000</span></div><span class="item__meta">230&nbsp;мл, яблоко, апельсин, лимон, щавель</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/panna.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Вода Acqua Panna</span><span class="item__price">40&nbsp;000</span></div><span class="item__meta">250&nbsp;мл, без газа</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/pellegrino.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Вода San Pellegrino</span><span class="item__price">40&nbsp;000</span></div><span class="item__meta">250&nbsp;мл, с газом</span></div></li>
+                </ul>
+              </section>
+            </div>
+          </div>
+          <div class="panel" id="panel-kitchen">
+            <h3 class="panel__title">Кухня</h3>
+            <div class="groups">
+              <section class="group">
+                <div class="group__head"><h3>Завтраки</h3></div>
+                <ul class="items">
+                  <li class="item"><img class="item__photo" src="img/menu/tosh-breakfast.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Завтрак TOSH с лепёшкой</span><span class="item__price">35&nbsp;000</span></div><span class="item__meta">260&nbsp;г, половина горячей лепёшки, каймак, домашний персиковый джем</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/tosh-katlama.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Завтрак TOSH с катламой</span><span class="item__price">35&nbsp;000</span></div><span class="item__meta">260&nbsp;г, катлама, каймак, домашний персиковый джем</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/ussr.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Завтрак «СССР» <span class="item__new">Новинка</span></span><span class="item__price">70&nbsp;000</span></div><span class="item__meta">380&nbsp;г, две сосиски, баклажанная икра, горошек, яйцо, горчица, лепёшка</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/shakshuka.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Шакшука TOSH</span><span class="item__price">70&nbsp;000</span></div><span class="item__meta">420&nbsp;г, томаты, яйца всмятку, чеснок, сливочное масло, лепёшка</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/tosh-eggs.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Яйца TOSH</span><span class="item__price">70&nbsp;000</span></div><span class="item__meta">350&nbsp;г, сузьма, яйца всмятку, чили-масло, гранола из семян и овсянки</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/draniki.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Драники из кабачка со страчателлой</span><span class="item__price">65&nbsp;000</span></div><span class="item__meta">210&nbsp;г</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/chicken-crepes.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Блинчики с курицей и грибами</span><span class="item__price">65&nbsp;000</span></div><span class="item__meta">210&nbsp;г</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/buckwheat.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Гречневая каша с яйцом и песто</span><span class="item__price">65&nbsp;000</span></div><span class="item__meta">310&nbsp;г, пармезан, йогурт, соус песто</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/millet.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Пшённая каша с трюфельным соусом</span><span class="item__price">65&nbsp;000</span></div><span class="item__meta">280&nbsp;г, шампиньоны, лук, сливочный соус с трюфельным маслом</span></div></li>
+                </ul>
+              </section>
+              <section class="group">
+                <div class="group__head"><h3>Сладкие завтраки</h3></div>
+                <ul class="items">
+                  <li class="item"><img class="item__photo" src="img/menu/syrniki.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Сырники из рикотты <span class="item__new">Новинка</span></span><span class="item__price">65&nbsp;000</span></div><span class="item__meta">215&nbsp;г, соус из клюквы и черники, инжир</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/oatmeal.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Овсяная каша с шоколадом и бананом</span><span class="item__price">65&nbsp;000</span></div><span class="item__meta">250&nbsp;г, тёмный шоколад, жареный банан, сливочное масло</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/yogurt.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Кофейный йогурт с чиа</span><span class="item__price">85&nbsp;000</span></div><span class="item__meta">310&nbsp;г, жареный банан, финики, гранола, орехи, мёд</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/toast.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Карамельный тост с сыром</span><span class="item__price">75&nbsp;000</span></div><span class="item__meta">280&nbsp;г, бриошь, моцарелла и гауда, мёд, сметана</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/zapekanka.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Творожная запеканка с маком</span><span class="item__price">60&nbsp;000</span></div><span class="item__meta">220&nbsp;г, домашний сироп из вишни и клюквы</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/apple-crepes.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Блинчики с яблоком и корицей</span><span class="item__price">60&nbsp;000</span></div><span class="item__meta">235&nbsp;г</span></div></li>
+                </ul>
+              </section>
+              <section class="group">
+                <div class="group__head"><h3>Салаты и боулы</h3></div>
+                <ul class="items">
+                  <li class="item"><img class="item__photo" src="img/menu/green-salad.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Зелёный салат</span><span class="item__price">90&nbsp;000</span></div><span class="item__meta">350&nbsp;г, айсберг, брокколи, кабачок, авокадо, эдамаме, соус из тахини и мёда</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/bowl-chicken.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Боул с курицей</span><span class="item__price">90&nbsp;000</span></div><span class="item__meta">360&nbsp;г, запечённая курица, булгур, брокколи, нут, фасоль, кешью</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/bowl-tuna.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Боул с филе тунца</span><span class="item__price">150&nbsp;000</span></div><span class="item__meta">420&nbsp;г, стейк из тунца, киноа, авокадо, батат фри, брокколи</span></div></li>
+                </ul>
+              </section>
+              <section class="group">
+                <div class="group__head"><h3>Сэндвичи</h3><span class="group__note">с бататом фри</span></div>
+                <ul class="items">
+                  <li class="item"><img class="item__photo" src="img/menu/sandwich-tuna.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Сэндвич с тунцом</span><span class="item__price">100&nbsp;000</span></div><span class="item__meta">370&nbsp;г, бриошь, тунец, белая фасоль, яйцо, вяленые томаты, йогурт</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/sandwich-chicken.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Сэндвич с курицей</span><span class="item__price">100&nbsp;000</span></div><span class="item__meta">360&nbsp;г, бриошь, курица, крем-чиз, огурец, грецкий орех, оливки</span></div></li>
+                </ul>
+              </section>
+              <section class="group">
+                <div class="group__head"><h3>Бутерброды на лепёшке</h3></div>
+                <ul class="items">
+                  <li class="item"><img class="item__photo" src="img/menu/fb-mortadella.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">С мортаделлой</span><span class="item__price">45&nbsp;000</span></div><span class="item__meta">165&nbsp;г, сливочное масло, мортаделла</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/fb-eggplant.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">С домашней баклажанной икрой</span><span class="item__price">45&nbsp;000</span></div><span class="item__meta">220&nbsp;г</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/fb-pate.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">С паштетом из куриной печени</span><span class="item__price">50&nbsp;000</span></div><span class="item__meta">240&nbsp;г, абрикосовый джем, сливочное масло</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/fb-avocado.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">С авокадо</span><span class="item__price">80&nbsp;000</span></div><span class="item__meta">250&nbsp;г, крем-чиз, гранола с вялеными томатами</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/fb-salmon.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">С лососем</span><span class="item__price">85&nbsp;000</span></div><span class="item__meta">195&nbsp;г, слабосолёный лосось, сливочное масло</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/fb-stracciatella.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Со страчателлой и трюфельной пастой</span><span class="item__price">95&nbsp;000</span></div><span class="item__meta">260&nbsp;г</span></div></li>
+                </ul>
+              </section>
+              <section class="group">
+                <div class="group__head"><h3>Добавки к завтраку или салату</h3></div>
+                <ul class="items">
+                  <li class="item"><img class="item__photo" src="img/menu/milk.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Молоко</span><span class="item__price">10&nbsp;000</span></div><span class="item__meta">50&nbsp;мл</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/egg.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Яйцо</span><span class="item__price">10&nbsp;000</span></div><span class="item__meta">1&nbsp;шт.</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/kaymak.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Каймак</span><span class="item__price">15&nbsp;000</span></div><span class="item__meta">50&nbsp;г</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/butter.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Сливочное масло</span><span class="item__price">15&nbsp;000</span></div><span class="item__meta">30&nbsp;г</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/honey.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Мёд</span><span class="item__price">15&nbsp;000</span></div><span class="item__meta">50&nbsp;г</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/lemon.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Лимон</span><span class="item__price">15&nbsp;000</span></div><span class="item__meta">50&nbsp;г</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/gouda.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Сыр гауда</span><span class="item__price">20&nbsp;000</span></div><span class="item__meta">50&nbsp;г</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/mortadella.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Мортаделла</span><span class="item__price">20&nbsp;000</span></div><span class="item__meta">50&nbsp;г</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/chicken.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Запечённая курица</span><span class="item__price">30&nbsp;000</span></div><span class="item__meta">100&nbsp;г</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/salad-mix.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Салатный микс</span><span class="item__price">40&nbsp;000</span></div><span class="item__meta">70&nbsp;г</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/avocado.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Авокадо</span><span class="item__price">40&nbsp;000</span></div><span class="item__meta">½&nbsp;шт.</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/tuna.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Филе тунца</span><span class="item__price">45&nbsp;000</span></div><span class="item__meta">80&nbsp;г</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/salmon.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Лосось слабосолёный</span><span class="item__price">60&nbsp;000</span></div><span class="item__meta">50&nbsp;г</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/batat.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Батат фри с трюфельным майонезом</span><span class="item__price">60&nbsp;000</span></div><span class="item__meta">200&nbsp;г</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/shrimp.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Креветки</span><span class="item__price">70&nbsp;000</span></div><span class="item__meta">5&nbsp;шт.</span></div></li>
+                </ul>
+              </section>
+            </div>
+          </div>
+          <div class="panel" id="panel-desserts">
+            <h3 class="panel__title">Десерты</h3>
+            <div class="groups">
+              <section class="group">
+                <div class="group__head"><h3>Десерты</h3></div>
+                <ul class="items">
+                  <li class="item"><img class="item__photo" src="img/menu/cockerel.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Петушок на палочке</span><span class="item__price">15&nbsp;000</span></div><span class="item__meta">15&nbsp;г, карамельный, как в детстве</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/canele.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Канеле <span class="item__new">Новинка</span></span><span class="item__price">25&nbsp;000</span></div><span class="item__meta">45&nbsp;г, ваниль и ром</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/cookie-oat.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Овсяное печенье</span><span class="item__price">25&nbsp;000</span></div><span class="item__meta">65&nbsp;г, без пшеничной муки, с курагой и грецким орехом</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/poppy-roll.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Рулет с маком</span><span class="item__price">30&nbsp;000</span></div><span class="item__meta">70&nbsp;г, с цукатами из апельсиновой цедры</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/cookie-kurt.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Шоколадное печенье с карамелью и куртом</span><span class="item__price">40&nbsp;000</span></div><span class="item__meta">80&nbsp;г</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/honey-cake.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Медовый торт</span><span class="item__price">45&nbsp;000</span></div><span class="item__meta">125&nbsp;г, медовые коржи, кофейно-карамельный крем</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/tiramisu.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Тирамису</span><span class="item__price">55&nbsp;000</span></div><span class="item__meta">130&nbsp;г</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/brownie.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Чиз-брауни с халвой и чёрным тмином</span><span class="item__price">55&nbsp;000</span></div><span class="item__meta">110&nbsp;г</span></div></li>
+                </ul>
+              </section>
+            </div>
+          </div>
+          <div class="panel" id="panel-beans">
+            <h3 class="panel__title">Зерно</h3>
+            <div class="groups">
+              <section class="group">
+                <div class="group__head"><h3>Зерно своей обжарки домой</h3></div>
+                <ul class="items">
+                  <li class="item"><img class="item__photo" src="img/menu/bean-brazil.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Бразилия Сандроп</span><span class="item__price">160&nbsp;000</span></div><span class="item__meta">200&nbsp;г, Серрадо Минейро, бурбон и параисо, натуральная обработка</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/bean-mexico.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Мексика Чабела, без кофеина</span><span class="item__price">160&nbsp;000</span></div><span class="item__meta">250&nbsp;г</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/bean-furaha.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Кения Фураха</span><span class="item__price">190&nbsp;000</span></div><span class="item__meta">200&nbsp;г, Ньери, SL28 и SL34, мытая обработка</span></div></li>
+                  <li class="item"><img class="item__photo" src="img/menu/bean-subra.webp" width="240" height="240" loading="lazy" alt=""><div class="item__text"><div class="item__head"><span class="item__name">Кения Субра</span><span class="item__price">210&nbsp;000</span></div><span class="item__meta">200&nbsp;г, Ньери, анаэробная натуральная обработка</span></div></li>
+                </ul>
+              </section>
+            </div>
+          </div>
+        <!-- MENU:END -->
+        </div>
       </div>
     </section>
 
@@ -214,7 +409,20 @@
         <h2 id="reviews-title" data-i18n="reviews.title">Гости о нас</h2>
         <a class="link" href="https://yandex.uz/maps/org/tosh_coffee/100439749029/reviews/" target="_blank" rel="noopener"><span data-i18n="reviews.rating">4,7 на Яндекс Картах</span></a>
       </div>
-      <div class="reviews__list" id="reviews"></div>
+      <div class="reviews__list" id="reviews">
+      <!-- REVIEWS:START -->
+        <figure class="review"><blockquote><p>С чего точно стоит начать — кофе. Это самый вкусный кофе в Ташкенте, который я пробовала. Идеальный! Брала карамелизированные тосты с сыром — очень вкусно и сытно.</p></blockquote><figcaption>Ольга Матяш</figcaption></figure>
+        <figure class="review"><blockquote><p>Очень уютное место с красивым интерьером — всё продумано до мелочей, атмосфера располагает, и хочется остаться подольше. Еда вкусная, всё свежее и красиво подано.</p></blockquote><figcaption>Анна Загуменникова</figcaption></figure>
+        <figure class="review"><blockquote><p>Отличное место, где можно попробовать кофе, приготовленный альтернативными способами на разном зерне. Крутой дизайн и живой винил.</p></blockquote><figcaption>Артём Г.</figcaption></figure>
+        <figure class="review"><blockquote><p>Самая вкусная V60 в Ташкенте. Драники со страчателлой — очень вкусные! Атмосфера — восторг!</p></blockquote><figcaption>Василина А.</figcaption></figure>
+        <figure class="review"><blockquote><p>Место уютное, всё выглядит аккуратно и со вкусом. Еда вкусная, чувствуется, что готовят с вниманием. Пробовала матча-латте — очень понравился.</p></blockquote><figcaption>Зоя Коваленко</figcaption></figure>
+        <figure class="review"><blockquote><p>Вкусный капучино, нереальная творожно-маковая запеканка. Можно собрать хороший завтрак, ну и лепёшки с каймаком и джемом — в самое ♥</p></blockquote><figcaption>Ангелина</figcaption></figure>
+        <figure class="review"><blockquote><p>Исключительно высокое качество кофе, интересный сорт зерна. Еда очень вкусная, продукты свежие. Порекомендовала бы друзьям и вернулась бы сама.</p></blockquote><figcaption>Eva T.</figcaption></figure>
+        <figure class="review"><blockquote><p>Очень стильное место Ташкента. Кофе один из самых достойных. Красивый интерьер, пропитанный любовью к Ташкенту.</p></blockquote><figcaption>Виталина Мельцова</figcaption></figure>
+        <figure class="review"><blockquote><p>Стильно, современно. Ташкент, каким он должен быть.</p></blockquote><figcaption>Александр Дорогов</figcaption></figure>
+        <figure class="review"><blockquote><p>Очень приятная атмосфера: можно часами сидеть и наслаждаться работой и встречами.</p></blockquote><figcaption>Neda Golshan</figcaption></figure>
+      <!-- REVIEWS:END -->
+      </div>
     </section>
 
     <!-- Адрес, часы и карта -->
