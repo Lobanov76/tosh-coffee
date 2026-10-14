@@ -38,6 +38,10 @@
     return "ru";
   }
 
+  const langToggle = document.querySelector(".lang__toggle");
+  const langCode = document.querySelector(".lang__code");
+  const langList = document.getElementById("lang-list");
+
   function applyLang(next) {
     lang = next;
     document.documentElement.lang = lang;
@@ -57,8 +61,13 @@
     document.querySelectorAll("[data-i18n-title]").forEach((el) => {
       el.setAttribute("title", tr(el.dataset.i18nTitle));
     });
-    document.querySelectorAll(".lang button").forEach((btn) => {
-      btn.setAttribute("aria-pressed", String(btn.dataset.lang === lang));
+    document.querySelectorAll(".lang__list button").forEach((btn) => {
+      const on = btn.dataset.lang === lang;
+      if (on) btn.setAttribute("aria-current", "true"); else btn.removeAttribute("aria-current");
+      if (on) {
+        langCode.textContent = btn.dataset.code;
+        langToggle.setAttribute("aria-label", `${tr("lang.label")}: ${btn.textContent}`);
+      }
     });
 
     renderMenu();
@@ -66,10 +75,24 @@
     updateStatus();
   }
 
-  document.querySelectorAll(".lang button").forEach((btn) => {
+  /* Переключатель языка: виден только текущий, остальные — в выпадающем списке */
+  function setLangOpen(open) {
+    langList.hidden = !open;
+    langToggle.setAttribute("aria-expanded", String(open));
+  }
+  langToggle.addEventListener("click", () => setLangOpen(langList.hidden));
+  document.addEventListener("click", (e) => {
+    if (!langList.hidden && !e.target.closest(".lang")) setLangOpen(false);
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !langList.hidden) { setLangOpen(false); langToggle.focus(); }
+  });
+  langList.querySelectorAll("button").forEach((btn) => {
     btn.addEventListener("click", () => {
       applyLang(btn.dataset.lang);
       try { window.localStorage.setItem(STORE_KEY, lang); } catch (e) { /* без сохранения */ }
+      setLangOpen(false);
+      langToggle.focus();
     });
   });
 
