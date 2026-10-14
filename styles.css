@@ -262,17 +262,20 @@ h3 {
   font-weight: 250;
   line-height: 0.8;
 }
+/* Надпись «проявляется» слева направо: буквы по очереди выходят из размытия */
 .wordmark__word span {
   display: block;
-  animation: carve 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  animation: glow-in 1.3s cubic-bezier(0.25, 0.6, 0.2, 1) both;
 }
-.wordmark__word span:nth-child(2) { animation-delay: 0.08s; }
-.wordmark__word span:nth-child(3) { animation-delay: 0.16s; }
-.wordmark__word span:nth-child(4) { animation-delay: 0.24s; }
+.wordmark__word span:nth-child(1) { animation-delay: 0.15s; }
+.wordmark__word span:nth-child(2) { animation-delay: 0.4s; }
+.wordmark__word span:nth-child(3) { animation-delay: 0.65s; }
+.wordmark__word span:nth-child(4) { animation-delay: 0.9s; }
 
-@keyframes carve {
-  from { opacity: 0; transform: translateY(0.12em); }
-  to { opacity: 1; transform: none; }
+@keyframes glow-in {
+  from { opacity: 0; filter: blur(14px); transform: translateX(-0.06em); }
+  60% { filter: blur(1px); }
+  to { opacity: 1; filter: none; transform: none; }
 }
 
 .wordmark__sub {
@@ -281,6 +284,11 @@ h3 {
   color: var(--ink-2);
   font-size: clamp(0.875rem, 2.4vw, 1.125rem);
   letter-spacing: 0.5em;
+  animation: sub-in 1.2s 1.3s ease-out both;
+}
+@keyframes sub-in {
+  from { opacity: 0; letter-spacing: 0.9em; }
+  to { opacity: 1; letter-spacing: 0.5em; }
 }
 
 .hero__text {
