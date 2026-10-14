@@ -130,6 +130,9 @@ window.TOSH_TEXT = {
   "reviews.title": t("Гости о нас", "Mehmonlar fikri", "What guests say"),
   "reviews.rating": t("4,7 на Яндекс Картах", "Yandex Xaritalarda 4,7", "4.7 on Yandex Maps"),
   "reviews.all": t("Все отзывы", "Barcha sharhlar", "All reviews"),
+  "reviews.more": t("Ещё 6 отзывов", "Yana 6 ta sharh", "6 more reviews"),
+  "reviews.less": t("Свернуть", "Yigʻish", "Show less"),
+  "reviews.stars": t("Оценка 5 из 5", "Baho: 5 dan 5", "Rated 5 out of 5"),
   "reviews.translated": t("", "Rus tilidan tarjima", "Translated from Russian"),
   "visit.title": t("Как нас найти", "Bizni qayerdan topish mumkin", "Find us"),
   "visit.address": t(
@@ -155,52 +158,52 @@ window.TOSH_REVIEWS = [
     "С чего точно стоит начать — кофе. Это самый вкусный кофе в Ташкенте, который я пробовала. Идеальный! Брала карамелизированные тосты с сыром — очень вкусно и сытно.",
     "Albatta qahvadan boshlash kerak. Toshkentda tatib koʻrganlarim ichida eng mazali qahva. Mukammal! Pishloqli karamel tost oldim — juda mazali va toʻyimli.",
     "Start with the coffee. It is the best coffee I’ve had in Tashkent. Perfect! I had the caramel toast with cheese, delicious and filling."
-  )],
-  ["Анна Загуменникова", t(
-    "Очень уютное место с красивым интерьером — всё продумано до мелочей, атмосфера располагает, и хочется остаться подольше. Еда вкусная, всё свежее и красиво подано.",
-    "Chiroyli interyerli juda shinam joy — hamma narsa mayda detallargacha oʻylangan, uzoqroq qolging keladi. Taomlar mazali, hammasi yangi va chiroyli tortilgan.",
-    "A very cosy place with a beautiful interior, thought through to the details. You want to stay longer. The food is tasty, fresh and beautifully served."
-  )],
-  ["Артём Г.", t(
-    "Отличное место, где можно попробовать кофе, приготовленный альтернативными способами на разном зерне. Крутой дизайн и живой винил.",
-    "Turli donlarda muqobil usullar bilan tayyorlangan qahvani tatib koʻrish mumkin boʻlgan ajoyib joy. Zoʻr dizayn va jonli vinil.",
-    "A great place to try coffee brewed by alternative methods on different beans. Great design and live vinyl."
-  )],
+  ), 5],
   ["Василина А.", t(
     "Самая вкусная V60 в Ташкенте. Драники со страчателлой — очень вкусные! Атмосфера — восторг!",
     "Toshkentdagi eng mazali V60. Strachatellali dranikilar juda mazali! Atmosfera — ajoyib!",
     "The best V60 in Tashkent. The pancakes with stracciatella are delicious! The atmosphere is a delight!"
-  )],
-  ["Зоя Коваленко", t(
-    "Место уютное, всё выглядит аккуратно и со вкусом. Еда вкусная, чувствуется, что готовят с вниманием. Пробовала матча-латте — очень понравился.",
-    "Joy shinam, hamma narsa did bilan qilingan. Taomlar mazali, e’tibor bilan tayyorlanishi sezilib turadi. Matcha-latte ichib koʻrdim — juda yoqdi.",
-    "Cosy, neat and tasteful. The food is good and you can tell it is made with care. I tried the matcha latte and loved it."
-  )],
-  ["Ангелина", t(
-    "Вкусный капучино, нереальная творожно-маковая запеканка. Можно собрать хороший завтрак, ну и лепёшки с каймаком и джемом — в самое ♥",
-    "Mazali kapuchino, aql bovar qilmas makli zapekanka. Yaxshi nonushta yigʻish mumkin, qaymoq va jemli non esa — yurakka ♥",
-    "Tasty cappuccino and an unreal poppy seed cottage cheese bake. You can put together a great breakfast, and the flatbread with kaymak and jam goes straight to the ♥"
-  )],
-  ["Eva T.", t(
-    "Исключительно высокое качество кофе, интересный сорт зерна. Еда очень вкусная, продукты свежие. Порекомендовала бы друзьям и вернулась бы сама.",
-    "Qahva sifati juda yuqori, qiziqarli don navi. Taomlar juda mazali, mahsulotlar yangi. Doʻstlarimga tavsiya qilardim va oʻzim ham qaytardim.",
-    "Exceptional coffee quality and an interesting bean. The food is very good and fresh. I would recommend it to friends and come back myself."
-  )],
-  ["Виталина Мельцова", t(
-    "Очень стильное место Ташкента. Кофе один из самых достойных. Красивый интерьер, пропитанный любовью к Ташкенту.",
-    "Toshkentning juda didli maskani. Qahvasi eng munosiblaridan. Toshkentga muhabbat bilan yoʻgʻrilgan chiroyli interyer.",
-    "One of the most stylish places in Tashkent, with some of its best coffee. A beautiful interior steeped in love for the city."
-  )],
+  ), 5],
   ["Александр Дорогов", t(
     "Стильно, современно. Ташкент, каким он должен быть.",
     "Didli, zamonaviy. Toshkent qanday boʻlishi kerak boʻlsa, xuddi shunday.",
     "Stylish and modern. Tashkent as it should be."
-  )],
+  ), 5],
+  ["Анна Загуменникова", t(
+    "Очень уютное место с красивым интерьером — всё продумано до мелочей, атмосфера располагает, и хочется остаться подольше. Еда вкусная, всё свежее и красиво подано.",
+    "Chiroyli interyerli juda shinam joy — hamma narsa mayda detallargacha oʻylangan, uzoqroq qolging keladi. Taomlar mazali, hammasi yangi va chiroyli tortilgan.",
+    "A very cosy place with a beautiful interior, thought through to the details. You want to stay longer. The food is tasty, fresh and beautifully served."
+  ), 5],
+  ["Артём Г.", t(
+    "Отличное место, где можно попробовать кофе, приготовленный альтернативными способами на разном зерне. Крутой дизайн и живой винил.",
+    "Turli donlarda muqobil usullar bilan tayyorlangan qahvani tatib koʻrish mumkin boʻlgan ajoyib joy. Zoʻr dizayn va jonli vinil.",
+    "A great place to try coffee brewed by alternative methods on different beans. Great design and live vinyl."
+  ), 5],
+  ["Зоя Коваленко", t(
+    "Место уютное, всё выглядит аккуратно и со вкусом. Еда вкусная, чувствуется, что готовят с вниманием. Пробовала матча-латте — очень понравился.",
+    "Joy shinam, hamma narsa did bilan qilingan. Taomlar mazali, e’tibor bilan tayyorlanishi sezilib turadi. Matcha-latte ichib koʻrdim — juda yoqdi.",
+    "Cosy, neat and tasteful. The food is good and you can tell it is made with care. I tried the matcha latte and loved it."
+  ), 5],
+  ["Ангелина", t(
+    "Вкусный капучино, нереальная творожно-маковая запеканка. Можно собрать хороший завтрак, ну и лепёшки с каймаком и джемом — в самое ♥",
+    "Mazali kapuchino, aql bovar qilmas makli zapekanka. Yaxshi nonushta yigʻish mumkin, qaymoq va jemli non esa — yurakka ♥",
+    "Tasty cappuccino and an unreal poppy seed cottage cheese bake. You can put together a great breakfast, and the flatbread with kaymak and jam goes straight to the ♥"
+  ), 5],
+  ["Eva T.", t(
+    "Исключительно высокое качество кофе, интересный сорт зерна. Еда очень вкусная, продукты свежие. Порекомендовала бы друзьям и вернулась бы сама.",
+    "Qahva sifati juda yuqori, qiziqarli don navi. Taomlar juda mazali, mahsulotlar yangi. Doʻstlarimga tavsiya qilardim va oʻzim ham qaytardim.",
+    "Exceptional coffee quality and an interesting bean. The food is very good and fresh. I would recommend it to friends and come back myself."
+  ), 5],
+  ["Виталина Мельцова", t(
+    "Очень стильное место Ташкента. Кофе один из самых достойных. Красивый интерьер, пропитанный любовью к Ташкенту.",
+    "Toshkentning juda didli maskani. Qahvasi eng munosiblaridan. Toshkentga muhabbat bilan yoʻgʻrilgan chiroyli interyer.",
+    "One of the most stylish places in Tashkent, with some of its best coffee. A beautiful interior steeped in love for the city."
+  ), 5],
   ["Neda Golshan", t(
     "Очень приятная атмосфера: можно часами сидеть и наслаждаться работой и встречами.",
     "Juda yoqimli atmosfera: soatlab oʻtirib, ish va uchrashuvlardan zavqlanish mumkin.",
     "A really pleasant atmosphere. You can sit for hours, working or meeting people."
-  )],
+  ), 5],
 ];
 
 /* Единицы объёма и веса */

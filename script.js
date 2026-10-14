@@ -72,6 +72,7 @@
 
     renderMenu();
     renderReviews();
+    setReviewsOpen(reviewsSection.classList.contains("is-open"));
     updateStatus();
   }
 
@@ -226,10 +227,32 @@
 
   const reviewsEl = document.getElementById("reviews");
 
+  /* Отзывы: видно 3, кнопка-стрелка открывает ещё 6 (всего 9) */
+  const REVIEWS_SHOWN = 3;
+  const REVIEWS_MAX = 9;
+  const reviewsSection = document.getElementById("reviews-section");
+  const reviewsMore = document.getElementById("reviews-more");
+  function setReviewsOpen(open) {
+    reviewsSection.classList.toggle("is-open", open);
+    reviewsMore.setAttribute("aria-expanded", String(open));
+    reviewsMore.querySelector(".more__text").textContent = tr(open ? "reviews.less" : "reviews.more");
+  }
+  reviewsSection.classList.add("is-collapsible");
+  reviewsMore.hidden = false;
+  reviewsMore.addEventListener("click", () => {
+    const open = !reviewsSection.classList.contains("is-open");
+    setReviewsOpen(open);
+    if (!open) reviewsSection.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
   function renderReviews() {
     reviewsEl.replaceChildren();
-    window.TOSH_REVIEWS.forEach(([name, text]) => {
-      const fig = el("figure", "review");
+    window.TOSH_REVIEWS.slice(0, REVIEWS_MAX).forEach(([name, text, stars], i) => {
+      const fig = el("figure", i < REVIEWS_SHOWN ? "review" : "review review--more");
+      const rate = el("div", "review__stars", "★".repeat(stars));
+      rate.setAttribute("role", "img");
+      rate.setAttribute("aria-label", tr("reviews.stars"));
+      fig.append(rate);
       const quote = el("blockquote");
       quote.append(el("p", "", text[lang]));
       const cap = el("figcaption", "", name);

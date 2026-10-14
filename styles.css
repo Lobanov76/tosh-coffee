@@ -700,26 +700,40 @@ body { padding-bottom: 58px; }
   justify-content: space-between;
   gap: 0.5rem 2rem;
 }
-/* На телефоне карточки листаются пальцем, на компьютере — три колонки */
+.rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--ink);
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: var(--line);
+  text-underline-offset: 0.25em;
+}
+.rating:hover { text-decoration-color: currentColor; }
+.rating__star { color: var(--ochre); font-size: 1.15em; }
+
+/* На телефоне — столбиком, на компьютере — три колонки */
 .reviews__list {
   display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 84%;
   gap: 1rem;
   margin-top: 2.5rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
-  overscroll-behavior-x: contain;
 }
-.reviews__list::-webkit-scrollbar { display: none; }
 .review {
-  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
   padding: 1.5rem;
   border-radius: var(--radius);
   background: var(--surface);
 }
-.review blockquote { margin: 0; }
+.review__stars {
+  margin-bottom: 0.75rem;
+  color: var(--ochre);
+  font-size: 1.05rem;
+  letter-spacing: 0.15em;
+  line-height: 1;
+}
+.review blockquote { margin: 0; flex: 1; }
 .review p {
   font-size: 1.0625rem;
   font-weight: 300;
@@ -736,6 +750,50 @@ body { padding-bottom: 58px; }
   font-size: 0.8125rem;
   font-weight: 400;
 }
+
+/* Сворачивание работает только с JS: без него видны все 9 */
+.reviews.is-collapsible:not(.is-open) .review--more { display: none; }
+.reviews.is-open .review--more { animation: review-in 0.45s ease-out both; }
+@keyframes review-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+.reviews__foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  margin-top: 1.5rem;
+}
+/* Рейтинг стоит у заголовка, а когда открыты все 9 — переезжает вниз */
+.rating--bottom { display: none; }
+.reviews.is-open .rating--top { visibility: hidden; }
+.reviews.is-open .rating--bottom { display: inline-flex; }
+.more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ink);
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
+.more__arrow {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  transition: background-color .2s, color .2s, transform .3s;
+}
+.more:hover .more__arrow { background: var(--ink); color: #fff; }
+.more[aria-expanded="true"] .more__arrow { transform: rotate(180deg); }
 
 /* ——— Адрес и карта ——— */
 .visit {
@@ -808,7 +866,6 @@ body { padding-bottom: 58px; }
   :root { --gutter: 32px; }
   .facts { grid-template-columns: 1fr 1fr; }
   .dishes { grid-auto-columns: 42%; }
-  .reviews__list { grid-auto-columns: 46%; }
 }
 
 @media (min-width: 768px) {
@@ -891,14 +948,8 @@ body { padding-bottom: 58px; }
   }
 
   .reviews__list {
-    display: block;
-    columns: 3;
-    column-gap: 1.25rem;
-    overflow: visible;
-  }
-  .review {
-    break-inside: avoid;
-    margin-bottom: 1.25rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
   }
 
   .visit {

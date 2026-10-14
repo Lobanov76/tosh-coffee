@@ -41,8 +41,8 @@ for (const s of TOSH_MENU) {
   menu += `${pad(12)}</div>\n${pad(10)}</div>\n`;
 }
 
-const reviews = TOSH_REVIEWS.map(([name, text]) =>
-  `${pad(8)}<figure class="review"><blockquote><p>${esc(text.ru)}</p></blockquote><figcaption>${esc(name)}</figcaption></figure>`
+const reviews = TOSH_REVIEWS.slice(0, 9).map(([name, text, stars], i) =>
+  `${pad(8)}<figure class="review${i < 3 ? "" : " review--more"}"><div class="review__stars" role="img" aria-label="${TOSH_TEXT["reviews.stars"].ru}">${"★".repeat(stars)}</div><blockquote><p>${esc(text.ru)}</p></blockquote><figcaption>${esc(name)}</figcaption></figure>`
 ).join("\n");
 
 const file = path.join(root, "index.html");
@@ -55,4 +55,4 @@ const put = (name, body, ind) => {
 put("MENU", menu.trimEnd(), 8);
 put("REVIEWS", reviews, 6);
 fs.writeFileSync(file, html);
-console.log(`Готово: ${TOSH_MENU.reduce((n, s) => n + s.groups.reduce((m, g) => m + g.items.length, 0), 0)} позиций меню и ${TOSH_REVIEWS.length} отзывов записаны в index.html`);
+console.log(`Готово: ${TOSH_MENU.reduce((n, s) => n + s.groups.reduce((m, g) => m + g.items.length, 0), 0)} позиций меню и ${Math.min(TOSH_REVIEWS.length, 9)} отзывов записаны в index.html`);

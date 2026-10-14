@@ -32,10 +32,10 @@
   <link rel="preload" as="image" href="img/hero-wide.webp" media="(min-width: 768px)" fetchpriority="high">
   <link rel="preload" href="fonts/commissioner-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="fonts/fonts.css">
-  <link rel="stylesheet" href="styles.css?v=23">
-  <script src="i18n.js?v=18" defer></script>
+  <link rel="stylesheet" href="styles.css?v=24">
+  <script src="i18n.js?v=19" defer></script>
   <script src="menu.js?v=2" defer></script>
-  <script src="script.js?v=19" defer></script>
+  <script src="script.js?v=20" defer></script>
 </head>
 <body>
   <a class="skip" href="#menu" data-i18n="hero.menu">Смотреть меню</a>
@@ -406,25 +406,28 @@
       </div>
     </section>
 
-    <!-- Отзывы с Яндекс Карт: собирает script.js -->
-    <section class="reviews wrap" aria-labelledby="reviews-title">
+    <!-- Отзывы с Яндекс Карт (все — 5 звёзд): 3 видны сразу, ещё 6 — по кнопке -->
+    <section class="reviews wrap" id="reviews-section" aria-labelledby="reviews-title">
       <div class="reviews__head">
         <h2 id="reviews-title" data-i18n="reviews.title">Гости о нас</h2>
-        <a class="link" href="https://yandex.uz/maps/org/tosh_coffee/100439749029/reviews/" target="_blank" rel="noopener"><span data-i18n="reviews.rating">4,7 на Яндекс Картах</span></a>
+        <a class="rating rating--top" href="https://yandex.uz/maps/org/tosh_coffee/100439749029/reviews/" target="_blank" rel="noopener"><span class="rating__star" aria-hidden="true">★</span><span data-i18n="reviews.rating">4,7 на Яндекс Картах</span></a>
       </div>
       <div class="reviews__list" id="reviews">
       <!-- REVIEWS:START -->
-        <figure class="review"><blockquote><p>С чего точно стоит начать — кофе. Это самый вкусный кофе в Ташкенте, который я пробовала. Идеальный! Брала карамелизированные тосты с сыром — очень вкусно и сытно.</p></blockquote><figcaption>Ольга Матяш</figcaption></figure>
-        <figure class="review"><blockquote><p>Очень уютное место с красивым интерьером — всё продумано до мелочей, атмосфера располагает, и хочется остаться подольше. Еда вкусная, всё свежее и красиво подано.</p></blockquote><figcaption>Анна Загуменникова</figcaption></figure>
-        <figure class="review"><blockquote><p>Отличное место, где можно попробовать кофе, приготовленный альтернативными способами на разном зерне. Крутой дизайн и живой винил.</p></blockquote><figcaption>Артём Г.</figcaption></figure>
-        <figure class="review"><blockquote><p>Самая вкусная V60 в Ташкенте. Драники со страчателлой — очень вкусные! Атмосфера — восторг!</p></blockquote><figcaption>Василина А.</figcaption></figure>
-        <figure class="review"><blockquote><p>Место уютное, всё выглядит аккуратно и со вкусом. Еда вкусная, чувствуется, что готовят с вниманием. Пробовала матча-латте — очень понравился.</p></blockquote><figcaption>Зоя Коваленко</figcaption></figure>
-        <figure class="review"><blockquote><p>Вкусный капучино, нереальная творожно-маковая запеканка. Можно собрать хороший завтрак, ну и лепёшки с каймаком и джемом — в самое ♥</p></blockquote><figcaption>Ангелина</figcaption></figure>
-        <figure class="review"><blockquote><p>Исключительно высокое качество кофе, интересный сорт зерна. Еда очень вкусная, продукты свежие. Порекомендовала бы друзьям и вернулась бы сама.</p></blockquote><figcaption>Eva T.</figcaption></figure>
-        <figure class="review"><blockquote><p>Очень стильное место Ташкента. Кофе один из самых достойных. Красивый интерьер, пропитанный любовью к Ташкенту.</p></blockquote><figcaption>Виталина Мельцова</figcaption></figure>
-        <figure class="review"><blockquote><p>Стильно, современно. Ташкент, каким он должен быть.</p></blockquote><figcaption>Александр Дорогов</figcaption></figure>
-        <figure class="review"><blockquote><p>Очень приятная атмосфера: можно часами сидеть и наслаждаться работой и встречами.</p></blockquote><figcaption>Neda Golshan</figcaption></figure>
+        <figure class="review"><div class="review__stars" role="img" aria-label="Оценка 5 из 5">★★★★★</div><blockquote><p>С чего точно стоит начать — кофе. Это самый вкусный кофе в Ташкенте, который я пробовала. Идеальный! Брала карамелизированные тосты с сыром — очень вкусно и сытно.</p></blockquote><figcaption>Ольга Матяш</figcaption></figure>
+        <figure class="review"><div class="review__stars" role="img" aria-label="Оценка 5 из 5">★★★★★</div><blockquote><p>Самая вкусная V60 в Ташкенте. Драники со страчателлой — очень вкусные! Атмосфера — восторг!</p></blockquote><figcaption>Василина А.</figcaption></figure>
+        <figure class="review"><div class="review__stars" role="img" aria-label="Оценка 5 из 5">★★★★★</div><blockquote><p>Стильно, современно. Ташкент, каким он должен быть.</p></blockquote><figcaption>Александр Дорогов</figcaption></figure>
+        <figure class="review review--more"><div class="review__stars" role="img" aria-label="Оценка 5 из 5">★★★★★</div><blockquote><p>Очень уютное место с красивым интерьером — всё продумано до мелочей, атмосфера располагает, и хочется остаться подольше. Еда вкусная, всё свежее и красиво подано.</p></blockquote><figcaption>Анна Загуменникова</figcaption></figure>
+        <figure class="review review--more"><div class="review__stars" role="img" aria-label="Оценка 5 из 5">★★★★★</div><blockquote><p>Отличное место, где можно попробовать кофе, приготовленный альтернативными способами на разном зерне. Крутой дизайн и живой винил.</p></blockquote><figcaption>Артём Г.</figcaption></figure>
+        <figure class="review review--more"><div class="review__stars" role="img" aria-label="Оценка 5 из 5">★★★★★</div><blockquote><p>Место уютное, всё выглядит аккуратно и со вкусом. Еда вкусная, чувствуется, что готовят с вниманием. Пробовала матча-латте — очень понравился.</p></blockquote><figcaption>Зоя Коваленко</figcaption></figure>
+        <figure class="review review--more"><div class="review__stars" role="img" aria-label="Оценка 5 из 5">★★★★★</div><blockquote><p>Вкусный капучино, нереальная творожно-маковая запеканка. Можно собрать хороший завтрак, ну и лепёшки с каймаком и джемом — в самое ♥</p></blockquote><figcaption>Ангелина</figcaption></figure>
+        <figure class="review review--more"><div class="review__stars" role="img" aria-label="Оценка 5 из 5">★★★★★</div><blockquote><p>Исключительно высокое качество кофе, интересный сорт зерна. Еда очень вкусная, продукты свежие. Порекомендовала бы друзьям и вернулась бы сама.</p></blockquote><figcaption>Eva T.</figcaption></figure>
+        <figure class="review review--more"><div class="review__stars" role="img" aria-label="Оценка 5 из 5">★★★★★</div><blockquote><p>Очень стильное место Ташкента. Кофе один из самых достойных. Красивый интерьер, пропитанный любовью к Ташкенту.</p></blockquote><figcaption>Виталина Мельцова</figcaption></figure>
       <!-- REVIEWS:END -->
+      </div>
+      <div class="reviews__foot">
+        <button type="button" class="more" id="reviews-more" aria-controls="reviews" aria-expanded="false" hidden><span class="more__text">Ещё 6 отзывов</span><span class="more__arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M3 6l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span></button>
+        <a class="rating rating--bottom" href="https://yandex.uz/maps/org/tosh_coffee/100439749029/reviews/" target="_blank" rel="noopener"><span class="rating__star" aria-hidden="true">★</span><span data-i18n="reviews.rating">4,7 на Яндекс Картах</span></a>
       </div>
     </section>
 
