@@ -187,6 +187,8 @@ h3 {
 
 .lang {
   display: flex;
+  gap: 2px;
+  padding: 3px;
   margin-left: auto;
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -200,12 +202,15 @@ h3 {
   color: var(--ink-2);
   font: inherit;
   font-size: 0.875rem;
+  border-radius: calc(var(--radius) - 2px);
   cursor: pointer;
+  transition: background-color .15s, color .15s;
 }
+.lang button:hover:not([aria-pressed="true"]) { color: var(--ink); background: rgb(30 39 48 / .06); }
 .lang button[aria-pressed="true"] {
-  background: var(--sky);
-  color: var(--ink);
-  font-weight: 500;
+  background: var(--ink);
+  color: #fff;
+  font-weight: 600;
 }
 
 /* ——— Первый экран ——— */
